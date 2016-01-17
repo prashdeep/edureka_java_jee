@@ -1,0 +1,7 @@
+<!DOCTYPE Test
+[
+<!ELEMENT Test (Name,from,Profession)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT Profession (#PCDATA)>
+]>

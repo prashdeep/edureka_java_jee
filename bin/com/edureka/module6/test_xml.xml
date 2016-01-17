@@ -1,0 +1,33 @@
+<books>
+
+<book>
+  <id> 101 </id>
+  <name> Introductio to java  </book> 
+  <writer> Charan </writer>
+  </book>
+ 
+  <book>
+  <id> 102 </id>
+  <name> SOA Architechture </name>
+  <writer> Charan </writer>
+</book>
+
+<book>
+  <id> 103 </id>
+  <name> Introductio to java </name>
+  <writer> Charan </writer>
+</book>
+<book>
+  <id> 101 </id>
+  <name> Introductio to java </name>
+  <writer> Charan </writer>
+</book>
+
+<book>
+  <id> 101 </id>
+  <name> Introductio to java </name>
+  <writer> Charan </writer>
+</book>
+
+
+</books>

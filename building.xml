@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<building>
+  
+ <floor>
+  <house>
+     <room>
+       <color></color>
+       <person>
+         <name></name>
+         <age></age>
+         <height></height>
+       </person>
+     </room>
+   </house>
+ </floor>
+ <floor>
+   <house>
+     <room>
+       <color></color>
+     </room>
+   </house>
+ </floor>
+ <floor>
+   <house>
+     <room>
+       <color></color>
+     </room>
+   </house>
+ </floor>  
+</building>
