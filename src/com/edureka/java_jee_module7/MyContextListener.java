@@ -27,18 +27,11 @@ public class MyContextListener implements ServletContextListener {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "user", "password");
-
-			s = con.createStatement();
-
-			// fetching pageviews value from table counter
-			rs = s.executeQuery("select pageview from counter");
-			while (rs.next()) {
-				count = rs.getInt(1);
-			}
-
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/students", "root", "welcome");
+			
 			ctx = sce.getServletContext();
-			ctx.setAttribute("pcount", count);
+			ctx.setAttribute("connection", con);
+			ctx.setAttribute("username", "Pradeep");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -46,13 +39,7 @@ public class MyContextListener implements ServletContextListener {
 
 	public void contextDestroyed(ServletContextEvent sce) {
 
-		try {
-			ctx = sce.getServletContext();
-			count = (Integer) ctx.getAttribute("pcount");
-			ps = con.prepareStatement("update counter set pcount='" + count + "'");
-			ps.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		//removing the attribute from the context scope..
+		sce.getServletContext().removeAttribute("connection");
 	}
 }

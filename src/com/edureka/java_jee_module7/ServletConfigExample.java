@@ -21,7 +21,7 @@ public class ServletConfigExample extends HttpServlet {
 	 * <init-param> <param-name> password </param-name> <param-value> welcome
 	 * </param-value> </init-param>
 	 */
-	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		PrintWriter pw = res.getWriter();
 		res.setContentType("text/html");
 
