@@ -17,7 +17,8 @@ xmlns:empns="http://www.edureka.co/Employee" elementFormDefault="qualified">
         <sequence>
             <element name="id" type="int"></element>
             <element name="role" type="string"></element>
-            <element name="fullName" type="string"></element>
+            <element name="firstName" type="string"></element>
+             <element name="lastName" type="string"></element>
         </sequence>
     </complexType>
 </schema>

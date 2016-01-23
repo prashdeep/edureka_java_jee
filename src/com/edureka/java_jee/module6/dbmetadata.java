@@ -10,7 +10,7 @@ public class dbmetadata {
     	Class.forName("com.mysql.jdbc.Driver");
         System.out.println("Driver loaded...");
      
-        Connection con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test","root","welcome");
+        Connection con=DriverManager.getConnection("jdbc:mysql://localhost/STUDENTS","root","welcome");
         System.out.println("Connected to the database");
      
      DatabaseMetaData rsmd=con.getMetaData();

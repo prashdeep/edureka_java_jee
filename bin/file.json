@@ -6,5 +6,10 @@
     "Naveen",
     "Nitin",
     "Mithun"
-  ]
+  ],
+  "empMap": {
+    "1": "Pradeep",
+    "2": "Praveen",
+    "3": "Ajay"
+  }
 }
