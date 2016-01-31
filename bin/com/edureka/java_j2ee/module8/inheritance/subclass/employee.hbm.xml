@@ -4,7 +4,7 @@
           "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.edureka.java_j2ee.module8.inheritance.subclass.Employee" table="emp123">
+	<class name="com.edureka.java_j2ee.module8.inheritance.subclass.Employee" table="EMPLOYEE">
 		<id name="id">
 			<generator class="increment">
 			</generator>
@@ -14,7 +14,7 @@
 		</property>
 		
 		<joined-subclass name="com.edureka.java_j2ee.module8.inheritance.subclass.Regular_Employee"
-			table="regemp123">
+			table="REGULAR_EMP">
 			<key column="eid">
 			</key>
 			<property name="salary">
@@ -24,7 +24,7 @@
 		</joined-subclass>
 		
 		<joined-subclass name="com.edureka.java_j2ee.module8.inheritance.subclass.Contract_Employee"
-			table="contemp123">
+			table="CONTRACT_EMP">
 			<key column="eid">
 			</key>
 			<property name="pay_per_hour">

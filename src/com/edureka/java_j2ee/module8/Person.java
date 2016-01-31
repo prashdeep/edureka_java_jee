@@ -4,7 +4,7 @@ import javax.persistence.*;
 import static javax.persistence.GenerationType.*;
 
 @Entity // Required annotation
-@Table(name = "Person") // can be omitted if table name is exactly same as Class
+@Table(name = "PERSON_TABLE") // can be omitted if table name is exactly same as Class
 						// name
 public class Person {
 	@Id // Required annotation

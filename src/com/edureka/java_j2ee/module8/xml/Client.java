@@ -36,12 +36,14 @@ public class Client {
 
 		/* Update a record */
 		example.updateRecord(id1, "mining");
+		
+		/* List the records */
+		example.listRecords();
 
 		/* Delete */
 		example.deleteRecord(id3);
 
-		/* List the records */
-		example.listRecords();
+	
 	}
 
 	/* CREATE a record in the database */

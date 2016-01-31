@@ -3,7 +3,7 @@
           "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
           "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.edureka.java_j2ee.module8.inheritance.Employee" table="emp121" discriminator-value="emp">
+	<class name="com.edureka.java_j2ee.module8.inheritance.Employee" table="EMPLOYEE_TABLE_PER_HEIRARCHY" discriminator-value="emp">
 		<id name="id">
 			<generator class="increment">
 			</generator>
