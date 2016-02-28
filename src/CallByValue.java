@@ -1,21 +1,19 @@
 
 public class CallByValue {
+	
+	int data = 100;
 
-	public static void main(String[] args) {
-	
-		String name = "Pradeep ";
-		String modifiedName = setName(name);
-		
-		System.out.println("The value of a from the main method "+name);
-		System.out.println("The value of b from the main method "+modifiedName);
-	}
-	
-	
-	
-	private static String setName(String name){
-		name = name.concat("Kumar");
-		System.out.println("The value of name is "+name);
-		return name;
+	void callByValue(int data) {
+		data = data + 100;
+		System.out.println("The value of data inside the function = "+data);
 	}
 
+	public static void main(String args[]) {
+		CallByValue obj = new CallByValue();
+
+		System.out.println("Before calling the add function >> " + obj.data);
+		obj.callByValue(800);
+		System.out.println("Before calling the add function >>  " + obj.data);
+
+	}
 }
