@@ -13,7 +13,7 @@ public class GsonExample {
 		DataObject obj = new DataObject();
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-		//objectToJson(obj, gson);
+		// objectToJson(obj, gson);
 
 		jsonToObject();
 

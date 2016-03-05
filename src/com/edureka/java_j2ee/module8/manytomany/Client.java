@@ -33,7 +33,6 @@ public class Client {
 	public static void main(String[] args) {
 		getSessionFactory();
 
-		
 		Session session = factory.openSession();
 		Transaction t = session.beginTransaction();
 

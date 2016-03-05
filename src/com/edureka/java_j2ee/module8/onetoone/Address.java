@@ -36,8 +36,8 @@ public class Address {
 	public void setAddressId(long addressId) {
 		this.addressId = addressId;
 	}
-	
-	@Column(name = "ADDRESS_STREET", nullable = false, length=250)
+
+	@Column(name = "ADDRESS_STREET", nullable = false, length = 250)
 	public String getStreet() {
 		return this.street;
 	}
@@ -46,7 +46,7 @@ public class Address {
 		this.street = street;
 	}
 
-	@Column(name = "ADDRESS_CITY", nullable = false, length=50)
+	@Column(name = "ADDRESS_CITY", nullable = false, length = 50)
 	public String getCity() {
 		return this.city;
 	}
@@ -55,7 +55,7 @@ public class Address {
 		this.city = city;
 	}
 
-	@Column(name = "ADDRESS_STATE", nullable = false, length=50)
+	@Column(name = "ADDRESS_STATE", nullable = false, length = 50)
 	public String getState() {
 		return this.state;
 	}
@@ -64,7 +64,7 @@ public class Address {
 		this.state = state;
 	}
 
-	@Column(name = "ADDRESS_ZIPCODE", nullable = false, length=10)
+	@Column(name = "ADDRESS_ZIPCODE", nullable = false, length = 10)
 	public String getZipcode() {
 		return this.zipcode;
 	}

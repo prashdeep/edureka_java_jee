@@ -34,6 +34,4 @@ public class DataObject {
 		return "DataObject [data1=" + data1 + ", data2=" + data2 + ", list=" + list + ", empMap=" + empMap + "]";
 	}
 
-	
-	
 }

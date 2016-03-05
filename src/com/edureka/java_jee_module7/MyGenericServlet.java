@@ -9,14 +9,13 @@ import java.io.PrintWriter;
 
 public class MyGenericServlet extends GenericServlet {
 
-	
 	private String message;
-	
+
 	private static final long serialVersionUID = -5238165301867510265L;
-	
+
 	@Override
-	public void init(){
-	  	System.out.println("This is printed when the servlet is instantiated.");
+	public void init() {
+		System.out.println("This is printed when the servlet is instantiated.");
 	}
 
 	@Override

@@ -1,7 +1,7 @@
 package com.edureka.java_jee_module5;
 
 public class Student {
-	
+
 	protected String getName() {
 		return name;
 	}
@@ -32,7 +32,7 @@ public class Student {
 	}
 
 	private String name;
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -76,9 +76,7 @@ public class Student {
 	}
 
 	private int age;
-	
+
 	private String grade;
-	
-	
 
 }

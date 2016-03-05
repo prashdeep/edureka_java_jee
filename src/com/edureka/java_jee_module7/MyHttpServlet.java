@@ -40,7 +40,7 @@ public class MyHttpServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		try {
-    		String name1 = "Avaneesh";
+			String name1 = "Avaneesh";
 			String name2 = "Chetan";
 			String name3 = "Rakshit";
 
@@ -57,7 +57,7 @@ public class MyHttpServlet extends HttpServlet {
 			ps.addBatch();
 
 			int[] results = ps.executeBatch();
-			
+
 			System.out.println(Arrays.toString(results));
 			try {
 				ps.close();
@@ -72,6 +72,6 @@ public class MyHttpServlet extends HttpServlet {
 
 	public void destroy() {
 		System.out.println("Calling the destory functioin for closing the connection....");
-		
+
 	}
 }

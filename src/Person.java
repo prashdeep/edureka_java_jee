@@ -1,21 +1,19 @@
 
 public class Person {
-	
+
 	private String name;
 	private String sex;
 	private int age;
 	private String occupation;
-	
-	
+
 	private boolean permanent;
-	
-	Person(){
+
+	Person() {
 		permanent = true;
 		sex = "Male";
 		System.out.println("This is called when new person is called..");
 	}
-	
-	
+
 	public boolean isPermanent() {
 		return permanent;
 	}
@@ -24,10 +22,10 @@ public class Person {
 		this.permanent = permanent;
 	}
 
-	public void setOccupation(String occupation){
+	public void setOccupation(String occupation) {
 		this.occupation = occupation;
 	}
-	
+
 	public String getName() {
 		return this.name;
 	}
@@ -52,7 +50,7 @@ public class Person {
 		this.age = age;
 	}
 
-	public String getOccupation(){
+	public String getOccupation() {
 		return this.occupation;
 	}
 

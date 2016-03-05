@@ -2,7 +2,8 @@ package com.edureka.java_jee_module5;
 
 public class StaticInnerClass {
 	static int data = 30;
-	private static void  test(){
+
+	private static void test() {
 		System.out.println("Inside the static function called test");
 	}
 

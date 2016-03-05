@@ -6,30 +6,30 @@ public class Car extends Object {
 	public int windows;
 	public boolean airBagPresent;
 	private String priVariable;
-	
-	Car(){
-      tyres = 4;
-      windows = 4;
-      System.out.println("Called from the Car default no argument constructor");
-	}
-	
-	Car(String color, boolean airbagRequired){
-		this.color = color;
-		this.airBagPresent = airbagRequired;
-		
-	}
-	
-	Car(String color){
-		this.color = color;
+
+	Car() {
 		tyres = 4;
-	      windows = 4;
+		windows = 4;
+		System.out.println("Called from the Car default no argument constructor");
 	}
 
-	public void accelerate(){
+	Car(String color, boolean airbagRequired) {
+		this.color = color;
+		this.airBagPresent = airbagRequired;
+
+	}
+
+	Car(String color) {
+		this.color = color;
+		tyres = 4;
+		windows = 4;
+	}
+
+	public void accelerate() {
 		System.out.println("I am accleration..");
 	}
-	
-	public void applyBrake(){
+
+	public void applyBrake() {
 		System.out.println("Applying the brake..");
 	}
 }

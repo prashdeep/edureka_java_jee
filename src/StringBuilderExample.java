@@ -10,13 +10,12 @@ public class StringBuilderExample {
 		str.append(" Karnataka");
 		// print the StringBuilder after appending
 		System.out.println("After append = " + str);
-		
+
 		String str1 = "India > ";
 		String str2 = str1.concat("Bangalore ");
-		
+
 		System.out.println(str1);
 		System.out.println(str2);
-		
 
 	}
 }

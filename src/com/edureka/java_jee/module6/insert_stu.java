@@ -1,7 +1,5 @@
 package com.edureka.java_jee.module6;
 
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,7 +8,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.Scanner;
-
 
 /*
  * 
@@ -23,39 +20,34 @@ import java.util.Scanner;
  *   
  */
 
-public class insert_stu 
-{
-	public static void main(String[] a)throws IOException
-	{
-		try 
-		{
+public class insert_stu {
+	public static void main(String[] a) throws IOException {
+		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("Driver loaded...");
 
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost/STUDENTS","root","welcome");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/STUDENTS", "root", "welcome");
 			System.out.println("Connected to the database");
 
 			System.out.println("data base is connected!!!!");
-			CallableStatement calstat=con.prepareCall("{call insertIntoStudent(?,?)}");
+			CallableStatement calstat = con.prepareCall("{call insertIntoStudent(?,?)}");
 
-			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-			Scanner sc = new Scanner (System.in);
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			Scanner sc = new Scanner(System.in);
 			System.out.println("enter your id =>");
-			String id=sc.nextLine();
+			String id = sc.nextLine();
 			System.out.println("enter your name =>");
-			String name=sc.nextLine();
+			String name = sc.nextLine();
 
-
-			calstat.setString(1,id);
-			calstat.setString(2,name);
+			calstat.setString(1, id);
+			calstat.setString(2, name);
 
 			calstat.execute();
 			con.close();
 			System.out.println("Your data has been inserted into table.");
-		}catch(Exception e){
+		} catch (Exception e) {
 			System.out.println(e);
 		}
 	}
 
 }
-

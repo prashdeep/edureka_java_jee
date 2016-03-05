@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 public class ServletConfigExample extends HttpServlet {
 
 	/*
-	 * <init-param> <param-name> driver_name </param-name> <param-value> com.mysql.jdbc.Driver
-	 * </param-value> </init-param>
+	 * <init-param> <param-name> driver_name </param-name> <param-value>
+	 * com.mysql.jdbc.Driver </param-value> </init-param>
 	 * 
 	 * <init-param> <param-name> username </param-name> <param-value> root
 	 * </param-value> </init-param>

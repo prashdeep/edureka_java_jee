@@ -16,7 +16,8 @@ public class StoreData {
 
 		try {
 			Configuration configuration = new Configuration();
-			configuration.configure("/com/edureka/java_j2ee/module8/inheritance/concreteclass/annotation/hibernate.cfg.xml");
+			configuration
+					.configure("/com/edureka/java_j2ee/module8/inheritance/concreteclass/annotation/hibernate.cfg.xml");
 			serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties())
 					.buildServiceRegistry();
 			factory = configuration.buildSessionFactory(serviceRegistry);

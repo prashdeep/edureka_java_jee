@@ -18,13 +18,13 @@ import javax.persistence.Table;
 @DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
 @DiscriminatorValue(value = "employee")
 public class Employee {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private int id;
-	
-	@Column(name = "name")  
+
+	@Column(name = "name")
 	private String name;
 
 	public int getId() {

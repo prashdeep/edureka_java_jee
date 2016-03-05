@@ -1,20 +1,20 @@
 
 public class FunctionDefinition {
-	
-	int data ;
+
+	int data;
 	String name;
 	boolean flag;
 	static int value;
 
-	public void setData(int data){
+	public void setData(int data) {
 		this.data = data;
 	}
-	
-	public void setName(String name){
+
+	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public void printName(String n){
-		System.out.println("The name is "+name);
+
+	public void printName(String n) {
+		System.out.println("The name is " + name);
 	}
 }

@@ -8,18 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class SecondServlet extends HttpServlet {
-	
-		public void doGet(HttpServletRequest req, HttpServletResponse res) {
-			try {
 
-				res.setContentType("text/html");
-				PrintWriter out = res.getWriter();
-				ServletContext context = getServletConfig().getServletContext();
-				out.println("Welcome to Second servlet "+ context.getAttribute("username"));
-				out.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+	public void doGet(HttpServletRequest req, HttpServletResponse res) {
+		try {
+
+			res.setContentType("text/html");
+			PrintWriter out = res.getWriter();
+			ServletContext context = getServletConfig().getServletContext();
+			out.println("Welcome to Second servlet " + context.getAttribute("username"));
+			out.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

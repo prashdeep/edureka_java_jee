@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 
 public class SuccessServlet extends HttpServlet {
 
-	   protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	            throws ServletException, IOException {
-	        response.setContentType("text/html;charset=UTF-8");
-	        PrintWriter out = response.getWriter();
-	        try {
-	            
-	            out.println("<h2>Welcome user: You have succefully authenticated yourself.</h2>");
-	        } finally {            
-	            out.close();
-	        }
-	    }
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		try {
+
+			out.println("<h2>Welcome user: You have succefully authenticated yourself.</h2>");
+		} finally {
+			out.close();
+		}
 	}
+}

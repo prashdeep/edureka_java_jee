@@ -1,11 +1,11 @@
 
 public class CallByValue {
-	
+
 	int data = 100;
 
 	void callByValue(int data) {
 		data = data + 100;
-		System.out.println("The value of data inside the function = "+data);
+		System.out.println("The value of data inside the function = " + data);
 	}
 
 	public static void main(String args[]) {

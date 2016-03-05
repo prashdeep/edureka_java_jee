@@ -11,10 +11,10 @@ public class UpdateExample {
 
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/STUDENTS", "root", "welcome");
 		System.out.println("Connected to the database");
-		
+
 		Statement stmt = con.createStatement();
 		stmt.execute("update student set name='John' where name='Praveen'");
-        stmt.close();
+		stmt.close();
 		con.close();
 	}
 

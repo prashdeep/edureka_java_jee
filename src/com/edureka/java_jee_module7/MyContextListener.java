@@ -28,7 +28,7 @@ public class MyContextListener implements ServletContextListener {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/students", "root", "welcome");
-			
+
 			ctx = sce.getServletContext();
 			ctx.setAttribute("connection", con);
 			ctx.setAttribute("username", "Pradeep");
@@ -39,7 +39,7 @@ public class MyContextListener implements ServletContextListener {
 
 	public void contextDestroyed(ServletContextEvent sce) {
 
-		//removing the attribute from the context scope..
+		// removing the attribute from the context scope..
 		sce.getServletContext().removeAttribute("connection");
 	}
 }
