@@ -1,6 +1,6 @@
 package com.edureka.java_j2ee.module3;
 
-public class BaseClass {
+public class BaseClass extends Object {
 
 	public int baseValue = 100;
 

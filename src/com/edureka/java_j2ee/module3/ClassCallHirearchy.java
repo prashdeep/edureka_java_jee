@@ -30,8 +30,8 @@ public class ClassCallHirearchy extends BaseClass {
 	public static void main(String[] args) {
 
 		ClassCallHirearchy obj = new ClassCallHirearchy();
-		//obj.callMe();
-		//obj.printSuperClassValue();
+		obj.callMe();
+		obj.printSuperClassValue();
 	}
 
 }
