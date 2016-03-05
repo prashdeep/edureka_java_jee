@@ -2,15 +2,22 @@ package com.edureka.java_j2ee.module3;
 
 public abstract class Student {
 
-	long student_id;
-	String student_name;
+	private long student_id;
+	private String student_name;
 
-	String college_name;
-	Grade grade;
+	private String college_name;
+	private Grade grade;
 
-	int attendance_count;
+	private int attendance_count;
 
-	static Holidays generalHolidays;
+	void setAttendance_count(int attendance_count) {
+		this.attendance_count = attendance_count;
+	}
+	protected int getAttendance_count() {
+		return attendance_count;
+	}
+
+	private static Holidays generalHolidays;
 
 	public Student(long student_id, String student_name, String college_name, Grade grade) {
 		super();
@@ -27,43 +34,43 @@ public abstract class Student {
 		this.grade = Grade.A;
 	}
 
-	public long getStudent_id() {
+	protected long getStudent_id() {
 		return student_id;
 	}
 
-	public void setStudent_id(long student_id) {
+	protected void setStudent_id(long student_id) {
 		this.student_id = student_id;
 	}
 
-	public String getStudent_name() {
+	protected String getStudent_name() {
 		return student_name;
 	}
 
-	public void setStudent_name(String student_name) {
+	protected void setStudent_name(String student_name) {
 		this.student_name = student_name;
 	}
 
-	public String getCollege_name() {
+	protected String getCollege_name() {
 		return college_name;
 	}
 
-	public void setCollege_name(String college_name) {
+	protected void setCollege_name(String college_name) {
 		this.college_name = college_name;
 	}
 
-	public Grade getGrade() {
+	protected Grade getGrade() {
 		return grade;
 	}
 
-	public void setGrade(Grade grade) {
+	protected void setGrade(Grade grade) {
 		this.grade = grade;
 	}
 
-	public void printDetailsOfStudents() {
+	protected void printDetailsOfStudents() {
 		System.out.println(" The details of the student is " + toString());
 	}
 	
-	public abstract  void typeOfStudent();
+	protected abstract  void typeOfStudent();
 
 	public void attendClass() {
 		this.attendance_count++;

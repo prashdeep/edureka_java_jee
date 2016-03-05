@@ -8,7 +8,7 @@ public class DistanceLearning extends Student{
 	
 	public void takeBreakFromSemister(){
 		System.out.println("Taken break from semister.");
-		this.attendance_count=0;
+		this.setAttendance_count(0);
 	}
 	
 	public void typeOfStudent(){

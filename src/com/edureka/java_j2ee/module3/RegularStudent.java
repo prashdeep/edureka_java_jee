@@ -10,11 +10,11 @@ public class RegularStudent extends Student {
 	}
 
 	public void applyLeave(int noOfDays) {
-		this.attendance_count = this.attendance_count - noOfDays;
+		this.setAttendance_count(this.getAttendance_count() - noOfDays);
 	}
 	
 	public void applyLeave(int noOfDays, String reason) {
-		this.attendance_count = this.attendance_count - noOfDays;
+		this.setAttendance_count(this.getAttendance_count() - noOfDays);
 		System.out.println("Applying "+noOfDays+" for "+reason);
 	}
 
@@ -23,7 +23,7 @@ public class RegularStudent extends Student {
 	}
 
 	public boolean canAppearForExam() {
-		if (this.attendance_count < 50) {
+		if (this.getAttendance_count() < 50) {
 			return false;
 		}
 		return true;

@@ -6,18 +6,22 @@ public class TestStudent {
 		Student pradeep = new RegularStudent(1, "Pradeep", "PES");
 		Student praveen = new DistanceLearning(2, "Praveen", "PES", Grade.B);
 
-		System.out.println(pradeep);
-		System.out.println(praveen);
+/*		System.out.println(pradeep);
+		System.out.println(praveen);*/
 
-		for (int i = 0; i < 60; i++) {
+	/*	for (int i = 0; i < 60; i++) {
 			pradeep.attendClass();
-		}
+		}*/
 		
-		pradeep.typeOfStudent();
+		pradeep.attendClass();
 		
 		
-		((RegularStudent)pradeep).applyLeave(5, "Going on a vacation");
-		((RegularStudent)pradeep).applyLeave(2);
+		System.out.println(pradeep.getAttendance_count());
+		
+		//((RegularStudent)pradeep).applyLeave(5, "Going on a vacation");
+		//((RegularStudent)pradeep).applyLeave(2);
+		
+		System.out.println(((RegularStudent)pradeep).canAppearForExam()?"Pradeep can appear for the exam":"Pradeep cannot appear for the exam");
 		
 		
 		
