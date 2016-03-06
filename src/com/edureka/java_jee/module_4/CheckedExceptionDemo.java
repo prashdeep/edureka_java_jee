@@ -1,46 +1,34 @@
 package com.edureka.java_jee.module_4;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class CheckedExceptionDemo {
 
-	public int accessingFile() throws Exception {
+	public void accessingFile(String path) throws MyBuinessException {
 		// some file operioin or connecting to some other sytem.
-		int value = 10;
+
+		// connect the other system to get the information
+		FileReader file;
 		try {
-			// connect the other system to get the information
-			value = 1000;
-			throw new IOException();
-		} catch (IOException exception) {
-			throw new MyBuisinessException("Unable to contact the external system.");
-		}
-	}
-
-	class MyBuisinessException extends Exception {
-		private String message;
-
-		MyBuisinessException() {
-
-		}
-
-		MyBuisinessException(String exception) {
-			message = exception;
-		}
-
-		@Override
-		public String getMessage() {
-			return message;
-		}
-	}
-
-	public static void main(String args[]) {
-		CheckedExceptionDemo obj = new CheckedExceptionDemo();
-		try {
-			System.out.println(obj.accessingFile());
+			file = new FileReader(path);
+			file.read();
+			file.close();
 		} catch (Exception exception) {
-			System.out.println(exception.getMessage());
+			throw new MyBuinessException("The server is down. Please tr after some time.");
 		}
 
+	}
+
+	public static void main(String args[]) throws MyBuinessException   {
+		CheckedExceptionDemo obj = new CheckedExceptionDemo();
+		
+			System.out.println("Came inside the main method..");
+			obj.accessingFile("dfsdfsd");
+			
+		
 	}
 
 }
