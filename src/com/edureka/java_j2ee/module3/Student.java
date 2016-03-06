@@ -20,7 +20,6 @@ public abstract class Student {
 	private static Holidays generalHolidays;
 
 	public Student(long student_id, String student_name, String college_name, Grade grade) {
-		super();
 		this.student_id = student_id;
 		this.student_name = student_name;
 		this.college_name = college_name;
@@ -70,7 +69,7 @@ public abstract class Student {
 		System.out.println(" The details of the student is " + toString());
 	}
 	
-	protected abstract  void typeOfStudent();
+	protected abstract void typeOfStudent();
 
 	public void attendClass() {
 		this.attendance_count++;

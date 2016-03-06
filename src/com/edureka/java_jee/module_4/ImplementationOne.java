@@ -1,22 +1,22 @@
 package com.edureka.java_jee.module_4;
 
-public class Impl2 implements ICalculator {
+public class ImplementationOne implements ICalculator {
 
 	@Override
 	public int add(int a, int b) {
-		System.out.println("Returning the sum of two integers");
+		// TODO Auto-generated method stub
 		return a + b;
 	}
 
 	@Override
 	public int sub(int a, int b) {
-		System.out.println("Returning the sub of two integers");
+		// TODO Auto-generated method stub
 		return a - b;
 	}
 
 	@Override
 	public int multiply(int a, int b) {
-		System.out.println("Returning the mulitiplication of two integers");
+		// TODO Auto-generated method stub
 		return a * b;
 	}
 

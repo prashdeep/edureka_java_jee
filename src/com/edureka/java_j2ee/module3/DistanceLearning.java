@@ -11,6 +11,7 @@ public class DistanceLearning extends Student{
 		this.setAttendance_count(0);
 	}
 	
+	@Override
 	public void typeOfStudent(){
 		System.out.println("The student type is DistanceLearning");
 	}
