@@ -23,7 +23,6 @@ public class ThreadDemo1 extends Thread {
 		try {
 			// System.out.println("Starting the main thread...");
 			for (int i = 1; i <= 10; ++i) {
-
 				System.out.println("");
 				System.out.println("Main Thread " + i);
 				Thread.sleep(1000);

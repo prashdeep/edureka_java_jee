@@ -28,31 +28,30 @@ class ThreadDemo extends Thread {
 		System.out.println("Thread " + threadName + " exiting.");
 	}
 
-	public void start() {
+	public void initialize() {
 		System.out.println("Starting " + threadName);
 		if (t == null) {
 			t = new Thread(this, threadName);
 			t.start();
 		}
 	}
-
 }
 
-public class TestThread {
+public class SynchronizeThread {
 	public static void main(String args[]) {
 
 		PrintDemo PD = new PrintDemo();
 
-		ThreadDemo T1 = new ThreadDemo("Thread - 1 ", PD);
-		ThreadDemo T2 = new ThreadDemo("Thread - 2 ", PD);
+		ThreadDemo thread1 = new ThreadDemo("Thread - 1 ", PD);
+		ThreadDemo thread2 = new ThreadDemo("Thread - 2 ", PD);
 
-		T1.start();
-		T2.start();
+		thread1.initialize();
+		thread2.initialize();
 
 		// wait for threads to end
 		try {
-			T1.join();
-			T2.join();
+			thread1.join();
+			thread2.join();
 		} catch (Exception e) {
 			System.out.println("Interrupted");
 		}
