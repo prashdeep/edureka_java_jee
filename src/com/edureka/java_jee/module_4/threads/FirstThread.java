@@ -13,23 +13,12 @@ public void run()
   for ( int i=1; i<=10; i++)
   {
       //Displaying the numbers from this thread
-      System.out.println( "Messag from First Thread : " +i);
+	  System.out.println( "Message from "+Thread.currentThread().getName()+" Thread : " +i);
 
-     /*taking a delay of one second before displaying next number
-      *
-      * "Thread.sleep(1000);" - when this statement is executed,
-      * this thread will sleep for 1000 milliseconds (1 second)
-      * before executing the next statement.
-      *
-      * Since we are making this thread to sleep for one second,
-      * we need to handle "InterruptedException". Our thread
-      * may throw this exception if it is interrupted while it
-      * is sleeping.
-      *
-      */
+     
       try
       {
-         Thread.sleep (1000);
+         Thread.sleep (2000);
       }
       catch (InterruptedException interruptedException)
       {

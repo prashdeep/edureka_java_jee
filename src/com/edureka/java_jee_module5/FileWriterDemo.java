@@ -6,7 +6,7 @@ public class FileWriterDemo {
 
 	public static void main(String args[]) throws IOException {
 
-		File file = new File("Hello1.txt");
+		File file = new File("c:\\data_files\\Hello1.txt");
 		// creates the file
 		file.createNewFile();
 		// creates a FileWriter Object

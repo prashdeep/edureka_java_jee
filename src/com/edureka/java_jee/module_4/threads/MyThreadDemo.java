@@ -15,6 +15,7 @@ public class MyThreadDemo extends Thread {
 		MyThreadDemo thread = new MyThreadDemo();
 		thread.setName("Child Thread");
 		thread.start();
+		
 
 		for (int index = 0; index < 10; index++) {
 			System.out.println(Thread.currentThread().getName() + " priting the index value as " + index);
