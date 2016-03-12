@@ -1,4 +1,4 @@
-package com.edureka.java_jee.module_4;
+package com.edureka.java_jee.module_4.threads;
 
 import java.util.ArrayList;
 import java.util.List;

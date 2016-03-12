@@ -1,4 +1,4 @@
-package com.edureka.java_jee.module_4;
+package com.edureka.java_jee.module_4.threads;
 
 //This class is made as a thread by implementing "Runnable" interface.
 

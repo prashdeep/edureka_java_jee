@@ -1,4 +1,4 @@
-package com.edureka.java_jee.module_4;
+package com.edureka.java_jee.module_4.threads;
 
 class PrintDemo {
 	public void printCount() {
