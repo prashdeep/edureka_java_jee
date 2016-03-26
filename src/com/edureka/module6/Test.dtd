@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Test (Name,age*,from,dob,Profession)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT dob ((date,month,year)|(month,date,year) )>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT Profession (#PCDATA)>
