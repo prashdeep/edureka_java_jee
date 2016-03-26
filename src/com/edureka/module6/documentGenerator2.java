@@ -38,7 +38,7 @@ public class documentGenerator2 {
 		rootele.appendChild(studentele);
 		doc.appendChild(rootele);
 		Transformer t = TransformerFactory.newInstance().newTransformer();
-		t.transform(new DOMSource(doc), new StreamResult(new FileOutputStream("c:/Data Files/students.xml")));
+		t.transform(new DOMSource(doc), new StreamResult(new FileOutputStream("c:/data_files/students.xml")));
 		System.out.println("XML file generated..");
 
 	}

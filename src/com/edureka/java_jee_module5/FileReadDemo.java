@@ -13,6 +13,7 @@ public class FileReadDemo {
 			}
 
 		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 }

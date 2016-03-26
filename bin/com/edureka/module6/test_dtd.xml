@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE note SYSTEM "Note.dtd">
-<note>
-<to>Tove</to>
-<from>Jani</from>
-<Profession>Reminder</Profession>
-<body>Don't forget me this weekend!</body>
-</note>
+<!DOCTYPE Test PUBLIC "test" "Test.dtd" >
+<Test>
+	<Name>Vivek</Name>
+	<age>21</age>
+	<from>Hydrabad</from>
+	<dob>
+		<date>22</date>
+		<month>05</month>
+		<year>1983</year>
+	</dob>
+	<Profession>Developer</Profession>
+</Test>
+

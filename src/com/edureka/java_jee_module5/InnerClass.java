@@ -1,6 +1,6 @@
 package com.edureka.java_jee_module5;
 
-public class innerClass {
+public class InnerClass {
 	class test {
 		void display() {
 			System.out.println("In the inner class display() method...");
@@ -8,8 +8,8 @@ public class innerClass {
 	}
 
 	public static void main(String args[]) {
-		innerClass i = new innerClass();
-		innerClass.test x = i.new test();
+		InnerClass i = new InnerClass();
+		InnerClass.test x = i.new test();
 
 		x.display();
 	}

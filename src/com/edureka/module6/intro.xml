@@ -1,7 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<note>
-    <to> Tove</to>
-    <from>Jani</from>
-    <heading>Reminder</heading>
-    <body>Don't forget me this weekend!</body>
-</note>
+<?xml version="1.0"?>
+<!DOCTYPE note1 [
+<!ELEMENT note1 (to,from,location,heading,body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+]>
+<note1>
+<to>Pradeep/to>
+<from>Vivek</from>
+<location>bangalore</location>
+<age>dsfsdf</age>
+<heading>Reminder</heading>
+<body>Will be attending the class today</body>
+</note1>

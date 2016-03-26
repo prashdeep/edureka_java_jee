@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Test SYSTEM "Test.dtd">
 <Test>
-<Name>Charan</Name>
+<Name>Pradeep</Name>
+<age>21</age>
 <from>Bangalore</from>
 <Profession>Trainer</Profession> 
 </Test>

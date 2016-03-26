@@ -1,10 +1,15 @@
-<xs:element name="shipto">
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element name="name" type="xs:string"/>
-      <xs:element name="address" type="xs:string"/>
-      <xs:element name="city" type="xs:string"/>
-      <xs:element name="country" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
+<?xml version="1.0" encoding="UTF-8"?>
+<shiporder orderid="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shiporder.xsd">
+  <orderperson>orderperson</orderperson>
+  <shipto>
+    <name>name</name>
+    <address>address</address>
+    <city>city</city>
+    <country>country</country>
+  </shipto>
+  <item>
+    <title>title</title>
+    <quantity>1</quantity>
+    <price>0.0</price>
+  </item>
+</shiporder>

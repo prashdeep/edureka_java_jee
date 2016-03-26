@@ -1,5 +1,6 @@
 package com.edureka.java_jee_module5;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class LinkedListDemo {
@@ -11,7 +12,18 @@ public class LinkedListDemo {
 		list.add("John");
 		list.add("Bob");
 
+		//System.out.println(list);
+		
+		Iterator<String> it = list.iterator();
+		
+		while(it.hasNext()){
+			String name = it.next();
+			System.out.println("The name is "+name);
+		}
+		
+		list.push("Ramesh");
 		System.out.println(list);
+		
 	}
 
 }

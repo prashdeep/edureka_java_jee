@@ -1,16 +1,17 @@
 package com.edureka.java_jee.module_4.threads;
 
+
 import java.util.List;
 
 class Producer implements Runnable {
 	private final List<Integer> taskQueue;
 	private final int MAX_CAPACITY;
 
-	public Producer(List<Integer> sharedQueue, int size) {
-		this.taskQueue = sharedQueue;
+	public Producer(List<Integer> taskQueue, int size) {
+		this.taskQueue = taskQueue;
 		this.MAX_CAPACITY = size;
-	}
 
+	}
 	@Override
 	public void run() {
 		int counter = 0;

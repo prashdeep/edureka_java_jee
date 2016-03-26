@@ -1,6 +1,20 @@
 package com.edureka.java_jee_module5;
 
-public class Student {
+public class Student implements Comparable<Student>{
+
+	private String name;
+
+	private int age;
+
+	private String grade;
+	
+	Student() {
+		
+	}
+
+	Student(String name) {
+		this.name = name;
+	}
 
 	protected String getName() {
 		return name;
@@ -30,8 +44,6 @@ public class Student {
 	public String toString() {
 		return "Student [name=" + name + ", age=" + age + ", grade=" + grade + "]";
 	}
-
-	private String name;
 
 	@Override
 	public int hashCode() {
@@ -75,8 +87,14 @@ public class Student {
 		return true;
 	}
 
-	private int age;
-
-	private String grade;
+	@Override
+	public int compareTo(Student o) {
+		if (this.age < o.age){
+			return 1;
+		}else if (this.age > o.age){
+			return -1;
+		}
+		return 0;
+	}
 
 }

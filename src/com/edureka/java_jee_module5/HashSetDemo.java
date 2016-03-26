@@ -5,13 +5,18 @@ import java.util.TreeSet;
 
 public class HashSetDemo {
 	public static void main(String[] args) {
-		TreeSet<String> set = new TreeSet<String>();
+		HashSet<String> set = new HashSet<String>();
 
 		set.add("Praveen");
 		set.add("Ram");
 		set.add("Ramesh");
 		set.add("Ajay");
+		
 
 		System.out.println(set);
+		
+		System.out.println(set.contains("Praveen"));
+		
+		System.out.println(set.contains("Vikram"));
 	}
 }
