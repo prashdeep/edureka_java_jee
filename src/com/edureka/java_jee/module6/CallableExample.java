@@ -20,7 +20,7 @@ import java.util.Scanner;
  *   
  */
 
-public class insert_stu {
+public class CallableExample {
 	public static void main(String[] a) throws IOException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -30,17 +30,17 @@ public class insert_stu {
 			System.out.println("Connected to the database");
 
 			System.out.println("data base is connected!!!!");
-			CallableStatement calstat = con.prepareCall("{call insertIntoStudent(?,?)}");
+			CallableStatement calstat = con.prepareCall("{call insertIntoEMP(?,?)}");
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			Scanner sc = new Scanner(System.in);
-			System.out.println("enter your id =>");
-			String id = sc.nextLine();
 			System.out.println("enter your name =>");
 			String name = sc.nextLine();
+			System.out.println("enter your salary =>");
+			int salary = Integer.parseInt(sc.nextLine());
 
-			calstat.setString(1, id);
-			calstat.setString(2, name);
+			calstat.setString(1, name);
+			calstat.setInt(2, salary);
 
 			calstat.execute();
 			con.close();

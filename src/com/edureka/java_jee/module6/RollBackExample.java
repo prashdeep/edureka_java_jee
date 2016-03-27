@@ -13,12 +13,12 @@ public class RollBackExample {
 		Statement stmt = con.createStatement();
 		con.setAutoCommit(false);
 		stmt.addBatch("update student set name='Pradeep' where name='John'");
-		stmt.addBatch("insert into student values('112','Asha', 'Failed')");
+		stmt.addBatch("insert into student values('112','Asha')");
 		try {
 			stmt.executeBatch();
 			System.out.println("batch executed");
 			con.commit();
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			try {
 				con.rollback();
 				System.out.println("batch cancelled");

@@ -1,9 +1,22 @@
 package com.edureka.java_jee.module6;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
 //package database;
-import java.sql.*;
+
 
 public class createtable {
+	static String path,  username,  password;
+	
+	public createtable(){
+		//Load the properties file 
+		path  = "";
+		username = "";
+		password = "";
+		
+	}
 	public static void main(String args[]) throws Exception {
 
 		// Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -15,18 +28,17 @@ public class createtable {
 
 		Statement st = con.createStatement();
 
-		// System.out.println("Before creating the table...");
-		// st.execute("create table student(number varchar(10),name
-		// varchar(20))");
+		 System.out.println("Before creating the table...");
+		// st.execute("create table student(number varchar(10),name varchar(20))");
 		// System.out.println("table created");
 
-		st.executeUpdate("insert into student values('109', 'Tenzin')");
-		System.out.println("  row inserted");
+		//st.executeUpdate("insert into student values('11', 'Pradeep')");
+		//System.out.println("  row inserted");
 
-		// st.executeUpdate("update student set name='kevin mathew' where
-		// name='kevin'");
+		 st.executeUpdate("update student set name='kevin mathew' where name='Pradeep'");
 		System.out.println("row updated");
 
+		st.close();
 		con.close();
 		System.out.println("Connection closed...");
 
