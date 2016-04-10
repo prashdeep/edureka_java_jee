@@ -1,6 +1,6 @@
 package com.edureka.java_j2ee.module3;
 
-public class ClassCallHirearchy extends BaseClass {
+public class ClassCallHirearchy  extends BaseClass {
 
 	public int baseValue = 200;
 	

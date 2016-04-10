@@ -18,7 +18,7 @@ public class CallByReference {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args)throws Exception {
 		CallByReference obj = new CallByReference();
 		obj.array[0] = 1;
 		obj.array[1] = 2;
@@ -29,5 +29,6 @@ public class CallByReference {
 		obj.addItemsIntoArray(obj.array);
 		System.out.println("The array  after  calling the function > ");
 		obj.printArray();
+		
 	}
 }

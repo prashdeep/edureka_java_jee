@@ -12,8 +12,11 @@ public class Person {
 	@Column(name = "ID") // can be omitted if column name is same as field-name
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	@Column(name = "FIRST_NAME")
 	private String firstName;
+	@Column(name = "LAST_NAME")
 	private String lastName;
+	@Column(name = "SALARY")
 	private int salary;
 
 	public Person() {

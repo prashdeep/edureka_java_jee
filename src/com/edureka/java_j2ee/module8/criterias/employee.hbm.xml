@@ -4,12 +4,10 @@
  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name="Employee" table="EMPLOYEE">
-      <meta attribute="class-description">
-         This class contains the employee detail. 
-      </meta>
+   <class name="com.edureka.java_j2ee.module8.criterias.Employee" table="EMPLOYEE_CRITERIA">
+
       <id name="id" type="int" column="id">
-         <generator class="native"/>
+         <generator class="increment"/>
       </id>
       <property name="firstName" column="first_name" type="string"/>
       <property name="lastName" column="last_name" type="string"/>

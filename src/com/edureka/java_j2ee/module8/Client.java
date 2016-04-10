@@ -28,7 +28,7 @@ public class Client {
 		Integer id3 = example.addRecord("Bruce", "Almighty", 30);
 
 		/* Update a record */
-		example.updateRecord(id1, 50);
+		example.updateRecord(id1, 5000);
 
 		/* Delete */
 		example.deleteRecord(id3);

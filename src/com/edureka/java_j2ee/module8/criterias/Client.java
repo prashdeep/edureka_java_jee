@@ -22,7 +22,7 @@ public class Client {
 
 		try {
 			Configuration configuration = new Configuration();
-			configuration.configure("/com/edureka/java_j2ee/module8/collections/hibernate.cfg.xml");
+			configuration.configure("/com/edureka/java_j2ee/module8/criterias/hibernate.cfg.xml");
 			serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties())
 					.buildServiceRegistry();
 			factory = configuration.buildSessionFactory(serviceRegistry);
@@ -42,8 +42,8 @@ public class Client {
 
 			/* Add few employee records in database */
 			Integer empID1 = client_1.InsertRecordInDatabase(1, "Zara", "Ali", 3000);
-			Integer empID2 = client_1.InsertRecordInDatabase(2, "Daisy", "Das", 1000);
-			Integer empID3 = client_1.InsertRecordInDatabase(3, "John", "Paul", 800);
+			Integer empID2 = client_1.InsertRecordInDatabase(2, "Daisy", "Das", 11000);
+			Integer empID3 = client_1.InsertRecordInDatabase(3, "John", "Paul", 8000);
 			Integer empID4 = client_1.InsertRecordInDatabase(4, "Mohd", "Yasee", 1000);
 
 			/* List down all the employees */
