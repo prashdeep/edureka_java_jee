@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -11,15 +16,29 @@ public class GsonExample {
 	public static void main(String[] args) {
 
 		DataObject obj = new DataObject();
+
+		List<String> list = new ArrayList<String>();
+		list.add("Pradeep");
+		list.add("Praveen");
+		list.add("Naveen");
+		list.add("Ramesh");
+
+		Map<Integer, String> map = new HashMap<Integer, String>();
+		map.put(1, "Keshav");
+		map.put(2, "Kumar");
+
+		obj.setEmpMap(map);
+		obj.setList(list);
+
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-		// objectToJson(obj, gson);
+		objectToJson(obj, gson);
 
-		jsonToObject();
+		jsonToObject(obj);
 
 	}
 
-	private static void jsonToObject() {
+	private static void jsonToObject(DataObject objParam) {
 		Gson gson = new Gson();
 
 		try {
@@ -29,6 +48,7 @@ public class GsonExample {
 
 			// convert the json string back to object
 			DataObject obj = gson.fromJson(br, DataObject.class);
+			System.out.println(obj.equals(objParam));
 
 			System.out.println(obj);
 

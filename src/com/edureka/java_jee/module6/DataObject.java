@@ -7,31 +7,71 @@ import java.util.Map;
 
 public class DataObject {
 
-	private int data1 = 100;
-	private String data2 = "hello";
-	private List<String> list = new ArrayList<String>() {
+	private List<String> list = new ArrayList<String>();
 
-		private static final long serialVersionUID = 1L;
+	private Map<Integer, String> empMap = new HashMap<Integer, String>();
+	
+	public List<String> getList() {
+		return list;
+	}
 
-		{
-			add("Pradeep");
-			add("Naveen");
-			add("Nitin");
-			add("Mithun");
+	public void setList(List<String> list) {
+		this.list = list;
+	}
+
+	public Map<Integer, String> getEmpMap() {
+		return empMap;
+	}
+
+	public void setEmpMap(Map<Integer, String> empMap) {
+		this.empMap = empMap;
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((empMap == null) ? 0 : empMap.hashCode());
+		result = prime * result + ((list == null) ? 0 : list.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
 		}
-	};
-
-	private Map<Integer, String> empMap = new HashMap<Integer, String>() {
-		{
-			put(1, "Pradeep");
-			put(2, "Praveen");
-			put(3, "Ajay");
+		if (obj == null) {
+			return false;
 		}
-	};
+		if (!(obj instanceof DataObject)) {
+			return false;
+		}
+		DataObject other = (DataObject) obj;
+		if (empMap == null) {
+			if (other.empMap != null) {
+				return false;
+			}
+		} else if (!empMap.equals(other.empMap)) {
+			return false;
+		}
+		if (list == null) {
+			if (other.list != null) {
+				return false;
+			}
+		} else if (!list.equals(other.list)) {
+			return false;
+		}
+		return true;
+	}
 
 	@Override
 	public String toString() {
-		return "DataObject [data1=" + data1 + ", data2=" + data2 + ", list=" + list + ", empMap=" + empMap + "]";
+		return "DataObject [list=" + list + ", empMap=" + empMap + "]";
 	}
 
+	
+
+	
 }

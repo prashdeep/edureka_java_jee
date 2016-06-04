@@ -7,13 +7,13 @@ public class RollBackExample {
 		Class.forName("com.mysql.jdbc.Driver");
 		System.out.println("Driver loaded...");
 
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/STUDENTS", "root", "welcome");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/NEWSTUDENTS", "root", "welcome");
 		System.out.println("Connected to the database");
 
 		Statement stmt = con.createStatement();
 		con.setAutoCommit(false);
-		stmt.addBatch("update student set name='Pradeep' where name='John'");
-		stmt.addBatch("insert into student values('112','Asha')");
+		stmt.addBatch("update student set name='Pradeep KUMAR #' where name='Pradeep'");
+		stmt.addBatch("insert into student values(6,'Asha','Kochi', 'Kerala' ,'dfsdfsdfsdf')");
 		try {
 			stmt.executeBatch();
 			System.out.println("batch executed");
