@@ -7,11 +7,12 @@ public class StaticInnerClass {
 		System.out.println("Inside the static function called test");
 	}
 
-	static class Inner {
+	static class Inner extends Thread{
 		void msg() {
 			System.out.println("data is " + data);
 			test();
 		}
+
 	}
 
 	public static void main(String args[]) {

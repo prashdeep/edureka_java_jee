@@ -1,6 +1,7 @@
 package com.edureka.java_jee.module_4.threads;
 
 
+import java.util.Date;
 import java.util.List;
 
 class Producer implements Runnable {
@@ -28,7 +29,7 @@ class Producer implements Runnable {
 		synchronized (taskQueue) {
 			while (taskQueue.size() == MAX_CAPACITY) {
 				System.out.println("Queue is full " + Thread.currentThread().getName() + " is waiting , size: "
-						+ taskQueue.size());
+						+ taskQueue.size()+"Time: "+new Date(System.currentTimeMillis()));
 				taskQueue.wait();
 			}
 

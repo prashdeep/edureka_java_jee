@@ -1,23 +1,39 @@
 package com.edureka.java_jee.module_4;
 
-public class ImplementationTwo implements ICalculator {
+public class ImplementationTwo implements ICalculator, PrintInterface {
 
 	@Override
 	public int add(int a, int b) {
-		System.out.println("Returning the sum of two integers");
-		return a + b;
+		System.out.println("Printing from the addition function ");
+		System.out.println("The sum is "+(a+b));
+		return a+b;
 	}
 
 	@Override
 	public int sub(int a, int b) {
-		System.out.println("Returning the sub of two integers");
-		return a - b;
+		System.out.println("Printing from the sub function ");
+		System.out.println("The sub is "+(a-b));
+		return a-b;
 	}
 
 	@Override
 	public int multiply(int a, int b) {
-		System.out.println("Returning the mulitiplication of two integers");
-		return a * b;
+		System.out.println("Printing from the multiply function ");
+		System.out.println("The multiply is "+(a*b));
+		return a*b;
+	}
+
+	@Override
+	public int mod(int a, int b) {
+		System.out.println("Printing from the mod function ");
+		System.out.println("The mod is "+(a%b));
+		return a%b;
+	}
+
+	@Override
+	public void print() {
+		System.out.println("Inside print two");
+		
 	}
 
 }

@@ -1,15 +1,12 @@
 {
-  "data1": 100,
-  "data2": "hello",
   "list": [
     "Pradeep",
+    "Praveen",
     "Naveen",
-    "Nitin",
-    "Mithun"
+    "Ramesh"
   ],
   "empMap": {
-    "1": "Pradeep",
-    "2": "Praveen",
-    "3": "Ajay"
+    "1": "Keshav",
+    "2": "Kumar"
   }
 }

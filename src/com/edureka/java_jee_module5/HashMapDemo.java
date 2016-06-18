@@ -1,6 +1,6 @@
 package com.edureka.java_jee_module5;
 
-import java.util.HashMap;
+import java.util.Hashtable;
 
 public class HashMapDemo {
 
@@ -15,13 +15,16 @@ public class HashMapDemo {
 		praveen.setAge(30);
 		praveen.setGrade("3rd Sem");
 
-		HashMap<Student, String> map = new HashMap<Student, String>();
-		map.put(pradeep, "Pradeep");
-		map.put(praveen, "Praveen");
+		Hashtable<String, Student > map = new Hashtable<String,  Student>();
+		map.put("Pradeep", pradeep );
+		map.put( "Praveen", praveen);
 
 		System.out.println(map.keySet());
+		
+		Student student = map.get("Pradeep");
+		System.out.println(student.getName());
 
-		// System.out.println(map);
+		//System.out.println(map);
 	}
 
 }

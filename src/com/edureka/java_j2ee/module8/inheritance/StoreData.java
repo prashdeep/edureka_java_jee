@@ -34,9 +34,7 @@ public class StoreData {
 
 		Transaction t = session.beginTransaction();
 
-		Employee e1 = new Employee();
-		e1.setName("Kavya");
-
+		
 		Regular_Employee e2 = new Regular_Employee();
 		e2.setName("Nala");
 		e2.setSalary(50000);
@@ -47,7 +45,7 @@ public class StoreData {
 		e3.setPay_per_hour(1000);
 		e3.setContract_duration("15 hours");
 
-		session.persist(e1);
+	
 		session.persist(e2);
 		session.persist(e3);
 

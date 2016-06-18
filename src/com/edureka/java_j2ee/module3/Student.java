@@ -1,6 +1,10 @@
 package com.edureka.java_j2ee.module3;
 
-public abstract class Student {
+public  class Student {
+	
+	public Student(){
+		
+	}
 
 	@Override
 	public int hashCode() {
@@ -118,8 +122,7 @@ public abstract class Student {
 		System.out.println(" The details of the student is " + toString());
 	}
 	
-	protected abstract void typeOfStudent();
-
+	
 	public void attendClass() {
 		this.attendance_count++;
 	}

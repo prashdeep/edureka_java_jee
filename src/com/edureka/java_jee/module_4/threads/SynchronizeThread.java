@@ -16,16 +16,16 @@ class PrintDemo {
 class ThreadDemo extends Thread {
 	private Thread t;
 	private String threadName;
-	PrintDemo PD;
+	PrintDemo printDemo;
 
 	ThreadDemo(String name, PrintDemo pd) {
 		threadName = name;
-		PD = pd;
+		printDemo = pd;
 	}
 
 	public void run() {
-		synchronized (PD) {
-			PD.printCount();
+		synchronized (printDemo) {
+			printDemo.printCount();
 		}
 		System.out.println("Thread " + threadName + " exiting.");
 	}

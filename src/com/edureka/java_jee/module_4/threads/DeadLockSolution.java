@@ -25,6 +25,7 @@ public class DeadLockSolution {
 					System.out.println("Thread 1: Holding lock 1 & 2...");
 				}
 			}
+			System.out.println("Releasing the locks of Lock1 and Lock2");
 		}
 	}
 
@@ -41,6 +42,8 @@ public class DeadLockSolution {
 					System.out.println("Thread 2: Holding lock 1 & 2...");
 				}
 			}
+			System.out.println("Releasing the locks of Lock1 and Lock2");
+
 		}
 	}
 }

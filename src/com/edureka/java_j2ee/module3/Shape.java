@@ -1,10 +1,13 @@
 package com.edureka.java_j2ee.module3;
 
+import java.io.FileReader;
+
 public abstract class Shape {
 
-	int sides;
+	final int sides = 0;
 
-	public abstract float area();
+	
+	public abstract double area();
 
 	public void test() {
 		System.out.println("Printing test .. ");

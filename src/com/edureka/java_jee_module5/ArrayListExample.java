@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.List;
 import java.util.ListIterator;
 
 public class ArrayListExample {
 
 	public static void main(String[] args) {
-		ArrayList<String> myList = new ArrayList<String>();
+		List<String> myList = new ArrayList<String>();
 
 		myList.add("Pradeep");
 		myList.add("Praveen");
@@ -17,11 +18,13 @@ public class ArrayListExample {
 		myList.add("Ajay");
 		myList.add("Ajay");
 		myList.add("John");
+		myList.add(6, "Naveen");
+
 
 		ArrayList<String> newList = new ArrayList<String>();
 
 		newList.addAll(myList);
-		
+	/*	
 		System.out.println("newList >> " + newList);
 		System.out.println(myList.remove("Ajay"));
 		System.out.println("myList > "+myList);
@@ -37,6 +40,8 @@ public class ArrayListExample {
 		for (String str : myList) {
 			System.out.println("Element >> " + str);
 		}
+		
+
 
 		Iterator<String> it = myList.iterator();
 		while (it.hasNext()) {
@@ -49,7 +54,7 @@ public class ArrayListExample {
 		while (listIterator.hasPrevious()) {
 			String element = listIterator.previous();
 			System.out.println("Iteraing via List iterator >> " + element);
-		}
+		}*/
 		Enumeration<String> et = Collections.enumeration(myList);
 
 		while (et.hasMoreElements()) {

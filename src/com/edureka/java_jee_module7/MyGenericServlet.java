@@ -20,7 +20,7 @@ public class MyGenericServlet extends GenericServlet {
 
 	@Override
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-
+		System.out.println("Came inside the service function of the generic servlet....");
 		PrintWriter writer = response.getWriter();
 		writer.write("<h1>This is my first statement getting printed by the Generic Servlet</h1>");
 	}

@@ -1,13 +1,17 @@
 package com.edureka.java_jee.module_4;
 
-public interface ICalculator {
+public interface ICalculator extends PrintInterface, OtherInterface{
 
-	public static final int CONSTANT = 40;
+	int MY_CONSTANT = 40;
 
-	public int add(int a, int b);
+	int add(int a, int b);
 
-	public abstract int sub(int a, int b);
+	int sub(int a, int b);
 
 	int multiply(int a, int b);
+
+	int mod(int a, int b);
+	
+	public void print();
 
 }

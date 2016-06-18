@@ -4,19 +4,18 @@ public class Rectangle extends Shape {
 	private float height;
 	private float width;
 
-	Rectangle(float height, float width) {
+	public Rectangle(float height, float width) {
 		this.height = height;
 		this.width = width;
 	}
 
 	@Override
-	public float area() {
+	public double area() {
 		return height * width;
 	}
-
-	public static void main(String[] args) {
-		Shape r = new Rectangle(20, 40);
-		System.out.println(r.area());
+	
+	public void testRectangle(){
+		System.out.println("Printing from the rectangle class .");
 	}
 
 }

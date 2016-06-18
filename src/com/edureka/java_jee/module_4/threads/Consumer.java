@@ -1,5 +1,6 @@
 package com.edureka.java_jee.module_4.threads;
 
+import java.util.Date;
 import java.util.List;
 
 class Consumer implements Runnable {
@@ -24,7 +25,7 @@ class Consumer implements Runnable {
 		synchronized (taskQueue) {
 			while (taskQueue.isEmpty()) {
 				System.out.println("Queue is empty " + Thread.currentThread().getName() + " is waiting , size: "
-						+ taskQueue.size());
+						+ taskQueue.size()+"Time: "+new Date(System.currentTimeMillis()));
 				taskQueue.wait();
 			}
 			Thread.sleep(1000);

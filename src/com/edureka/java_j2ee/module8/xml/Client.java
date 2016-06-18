@@ -33,6 +33,10 @@ public class Client {
 		Integer id1 = example.addRecord("Johny", "Travol", "manufacturing");
 		Integer id2 = example.addRecord("Kevin", "Becker", "admin");
 		Integer id3 = example.addRecord("Bruce", "Almighty", "HR");
+		
+		System.out.println("Generated id is "+id1);
+		System.out.println("Generated id is "+id2);
+		System.out.println("Generated id is "+id3);
 
 		/* Update a record */
 		example.updateRecord(id1, "mining");

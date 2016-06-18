@@ -21,7 +21,8 @@ public class FileWriterDemo {
 			in = new BufferedReader(new FileReader("c:\\data_files\\file.txt"));
 			String str;
 			while ((str = in.readLine()) != null) {
-				writer.write(str);
+				writer.write(str+"\n");
+				
 			}
 
 		} catch (IOException e) {

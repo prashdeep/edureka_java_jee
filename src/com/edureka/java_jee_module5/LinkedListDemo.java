@@ -16,6 +16,9 @@ public class LinkedListDemo {
 		
 		Iterator<String> it = list.iterator();
 		
+		list.push("");;
+		
+		
 		while(it.hasNext()){
 			String name = it.next();
 			System.out.println("The name is "+name);

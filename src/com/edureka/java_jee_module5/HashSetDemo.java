@@ -11,6 +11,7 @@ public class HashSetDemo {
 		set.add("Ram");
 		set.add("Ramesh");
 		set.add("Ajay");
+		set.add("Ajay");
 		
 
 		System.out.println(set);

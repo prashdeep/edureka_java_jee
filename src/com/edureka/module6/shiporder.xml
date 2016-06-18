@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shiporder orderid="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shiporder.xsd">
-  <orderperson>orderperson</orderperson>
+<shiporder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shiporder.xsd">
+  <orderperson>myOrder</orderperson>
   <shipto>
-    <name>name</name>
-    <address>address</address>
-    <city>city</city>
-    <country>country</country>
+    <name>Pradeep</name>
+    <address>sfsdf </address>
+    <city>Bangalore</city>
+    <country>India</country>
+
   </shipto>
   <item>
-    <title>title</title>
+    <title>book</title>
     <quantity>1</quantity>
-    <price>0.0</price>
+    <price>10.0</price>
   </item>
 </shiporder>
