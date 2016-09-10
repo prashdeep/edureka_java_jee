@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UncheckedExceptionDemo {
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args){
 		System.out.println("Enter two numbers ....");
 		Scanner sc = new Scanner(System.in);
 		int arg1 = 0;
@@ -14,6 +14,8 @@ public class UncheckedExceptionDemo {
 			arg1 = Integer.parseInt(sc.next());
 			arg2 = Integer.parseInt(sc.next());
 			result = arg1 / arg2;
+			Object o = null;
+			System.out.println(o.toString());
 
 		} catch (NumberFormatException exception) {
 			System.out.println("Please enter a valid number.. ");
@@ -21,6 +23,7 @@ public class UncheckedExceptionDemo {
 			System.out.println("Number cannot be divided by 0");
 		} catch (Exception ex) {
 			System.out.println("Some other exception caught..");
+			System.out.println(ex.toString());
 		}
 
 		finally {
@@ -31,7 +34,7 @@ public class UncheckedExceptionDemo {
 
 		System.out.println("Entered numbers are " + arg1 + " & " + arg2);
 
-		System.out.println("The sum is " + result);
+		System.out.println("The result of division is " + result);
 
 	}
 }
