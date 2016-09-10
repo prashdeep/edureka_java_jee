@@ -1,6 +1,8 @@
 package com.edureka.java_jee.module_4;
 
-public interface IDatbaseExecutor{
+import java.io.Serializable;
+
+public interface IDatbaseExecutor extends Serializable, Cloneable {
 	
 	public static final String TABLE_NAME="USERS";
 	

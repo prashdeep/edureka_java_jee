@@ -17,8 +17,6 @@ public class UncheckedExceptionDemo {
 
 		} catch (NumberFormatException exception) {
 			System.out.println("Please enter a valid number.. ");
-			throw new Exception("Thre is no sufficient funds to withdraw");
-
 		} catch (ArithmeticException exception) {
 			System.out.println("Number cannot be divided by 0");
 		} catch (Exception ex) {
