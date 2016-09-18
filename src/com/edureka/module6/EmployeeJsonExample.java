@@ -1,4 +1,4 @@
-package com.edureka.java_jee.module6;
+package com.edureka.module6;
 
 import java.util.ArrayList;
 import java.util.List;
