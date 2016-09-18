@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <!DOCTYPE note1 [
 <!ELEMENT note1 (to,from,location,heading,body)>
 <!ELEMENT to (#PCDATA)>
@@ -8,10 +9,9 @@
 <!ELEMENT body (#PCDATA)>
 ]>
 <note1>
-<to>Pradeep/to>
+<to>Pradeep</to>
 <from>Vivek</from>
 <location>bangalore</location>
-<age>dsfsdf</age>
 <heading>Reminder</heading>
 <body>Will be attending the class today</body>
 </note1>

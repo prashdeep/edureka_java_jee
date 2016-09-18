@@ -3,21 +3,18 @@ package com.edureka.java_jee.module_4;
 public class AnonymounsInnerClass {
 
 	public static void main(String[] args) {
-		myInterface t = new myInterface(){
+		myInterface obj = new myInterface() {
+			
 			@Override
-			public void run() {
-				// TODO Auto-generated method stub
+			public void display() {
+				System.out.println("implemented by MyAwesomeDisplay class");
 				
 			}
 		};
-		
-
+		obj.display();
 	}
-
 }
 
 interface myInterface {
-	public void run();
+	public void display();
 }
-
-

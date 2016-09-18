@@ -1,8 +1,7 @@
 package com.edureka.java_jee_module5;
 
- class OuterClass {
+class OuterClass{
 	private int num = 25;
-
 	// Accessing he inner class from the method within
 	void display() {
 		InnerClassDefinition inner = new InnerClassDefinition();
@@ -11,12 +10,17 @@ package com.edureka.java_jee_module5;
 	}
 
 	// inner class
-	protected class InnerClassDefinition {
+	protected class InnerClassDefinition  {
 		private int value = 60;
 
-		 void print() {
+		void print() {
 			System.out.println("This is inside the inner class");
 			System.out.println("The value of the number is " + num);
+		}
+		
+		void callDisplay(){
+			System.out.println("Calling the display menthod");
+			display();
 		}
 	}
 
@@ -27,10 +31,12 @@ public class MyInnerClass {
 		// Instantiating the outer class
 		OuterClass outer = new OuterClass();
 		OuterClass.InnerClassDefinition innerObj = outer.new InnerClassDefinition();
-		//outer.display();
+		// outer.display();
 		// Accessing the display_Inner() method.
 		OuterClass.InnerClassDefinition inner = outer.new InnerClassDefinition();
-		 inner.print();
+		//inner.callDisplay();
+		
+		System.out.println(inner instanceof OuterClass.InnerClassDefinition);
 	}
 
 }

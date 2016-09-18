@@ -8,7 +8,10 @@ public class WrapperExample {
 		System.out.println(i);
 		
 		String iStr = "53";
+		Integer intFromStr = new Integer(iStr);
 		new Integer(Integer.parseInt(iStr));
+		Integer int2 = Integer.valueOf(i);
+		int2.intValue();
 		
 		float f = 45;
 		Float ft = 45f;

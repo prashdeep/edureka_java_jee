@@ -10,7 +10,6 @@ public class Employee {
 	private Integer id;
 	private String firstName;
 	private String lastName;
-	private double income;
 
 	public Integer getId() {
 		return id;
@@ -43,4 +42,7 @@ public class Employee {
 	public void setIncome(double income) {
 		this.income = income;
 	}
+
+	private double income;
+
 }

@@ -9,7 +9,7 @@ public class PriorityQueueDemo {
 
 		// insert values in the queue
 		for (int i = 1; i <= 10; i++) {
-			prq.add(new Integer(i));
+			prq.add(i);
 		}
 
 		System.out.println("Initial priority queue values are: " + prq);

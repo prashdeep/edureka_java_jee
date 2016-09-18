@@ -18,20 +18,27 @@ public class TestEmployeeMarshing {
 		emp1.setId(1);
 		emp1.setFirstName("Pradeep");
 		emp1.setLastName("Kumar");
-		emp1.setIncome(100.0);
+		emp1.setIncome(900000.0);
 
 		Employee emp2 = new Employee();
 		emp2.setId(2);
 		emp2.setFirstName("Praveen");
 		emp2.setLastName("Gupta");
-		emp2.setIncome(200.0);
+		emp2.setIncome(8000000.0);
+		
+		Employee emp3 = new Employee();
+		emp3.setId(2);
+		emp3.setFirstName("Laxman");
+		emp3.setLastName("Shah");
+		emp3.setIncome(2000000.0);
 
 		employees.getEmployees().add(emp1);
 		employees.getEmployees().add(emp2);
+		employees.getEmployees().add(emp3);
 	}
 
 	public static void main(String[] args) throws JAXBException {
-		marshalingExample();
+		//marshalingExample();
 		System.out.println("************************************************");
 		unMarshalingExample();
 	}

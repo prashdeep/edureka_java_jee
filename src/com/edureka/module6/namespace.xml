@@ -1,0 +1,11 @@
+<root xmlns:html="www.myspec.com/html" xmlns:f="www.myfurniture.com/furniture">
+	<html:table>
+		<html:tr>Name</html:tr>
+		<html:td>Pradeep</html:td>
+	</html:table>
+	<f:table>
+		<f:type>wooden</f:type>
+		<f:color>brown</f:color>
+		<f:price>400$</f:price>
+	</f:table>
+</root>

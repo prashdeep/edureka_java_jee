@@ -2,6 +2,7 @@ package com.edureka.java_jee.module_4;
 
 public class StaticInnerClass {
 	static int data = 30;
+	
 	private void testMethod(){
 		System.out.println("Inside the test method....");
 	}

@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
 
 public class FileWriterDemo {
 
@@ -21,19 +22,15 @@ public class FileWriterDemo {
 			in = new BufferedReader(new FileReader("c:\\data_files\\file.txt"));
 			String str;
 			while ((str = in.readLine()) != null) {
-				writer.write(str+"\n");
-				
+				writer.write(str + "\n");
+				System.out.println(str);
 			}
-
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		finally{
+		} finally {
 			writer.flush();
 			writer.close();
 			in.close();
 		}
-
-		
 	}
 }

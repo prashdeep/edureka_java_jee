@@ -6,7 +6,8 @@ public class StudentList {
 
 	public static void main(String[] args) {
 		ArrayList<Student> studentList = new ArrayList<Student>();
-
+		
+		
 		Student std1 = new Student("Ramesh");
 		std1.setAge(20);
 
@@ -20,7 +21,7 @@ public class StudentList {
 		studentList.add(std2);
 
 		studentList.add(std3);
-		
+
 		java.util.Collections.sort(studentList);
 
 		System.out.println(studentList);

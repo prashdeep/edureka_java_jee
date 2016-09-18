@@ -8,6 +8,13 @@ public class Student implements Comparable<Student>{
 
 	private String grade;
 	
+	public Student(String name, int age, String grade) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.grade = grade;
+	}
+
 	Student() {
 		
 	}
@@ -34,15 +41,6 @@ public class Student implements Comparable<Student>{
 
 	protected String getGrade() {
 		return grade;
-	}
-
-	protected void setGrade(String grade) {
-		this.grade = grade;
-	}
-
-	@Override
-	public String toString() {
-		return "Student [name=" + name + ", age=" + age + ", grade=" + grade + "]";
 	}
 
 	@Override
@@ -87,14 +85,19 @@ public class Student implements Comparable<Student>{
 		return true;
 	}
 
+	protected void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", age=" + age + ", grade=" + grade + "]";
+	}
+
 	@Override
 	public int compareTo(Student o) {
-		if (this.age < o.age){
-			return 1;
-		}else if (this.age > o.age){
-			return -1;
-		}
-		return 0;
+		// TODO Auto-generated method stub
+		return new Integer(this.getAge()).compareTo(new Integer(o.getAge()));
 	}
 
 }

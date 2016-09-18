@@ -22,7 +22,7 @@ public class HashMapDemo {
 		System.out.println(map.keySet());
 		
 		Student student = map.get("Pradeep");
-		System.out.println(student.getName());
+		System.out.println(student);
 
 		//System.out.println(map);
 	}

@@ -4,18 +4,7 @@ public class RunnableThreadDemo {
 
 	public static void main(String[] args) {
 
-		Thread thread = new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				for (int index = 0; index < 10; index++) {
-					System.out.println(
-							"Thread name is " + Thread.currentThread().getName() + " printing the value of " + index);
-				}
-				System.out.println("Printed from the " + Thread.currentThread().getName());
-			}
-
-		});
+		Thread thread = new Thread(new MyRunnableClass());
 		thread.setName("Child Thread");
 		thread.start();
 

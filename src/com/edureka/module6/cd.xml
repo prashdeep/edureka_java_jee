@@ -1,5 +1,5 @@
-<?xml-stylesheet type="text/xsl" href="cd.xsl" ?>
-<!-- Edited by XMLSpy -->
+<?xml version="1.0" encoding="UTF-8"?>
+ <?xml-stylesheet type="text/xsl" href="cd.xsl"?>
 <catalog>
 	<cd>
 		<title>Empire Burlesque</title>
@@ -210,3 +210,4 @@
 		<year>1987</year>
 	</cd>
 </catalog>
+

@@ -13,10 +13,9 @@ public class FileReadDemo {
 			while ((str = in.readLine()) != null) {
 				System.out.println(str);
 			}
-
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			in.close();
 		}
 	}

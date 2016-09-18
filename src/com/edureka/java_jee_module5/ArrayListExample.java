@@ -11,6 +11,7 @@ public class ArrayListExample {
 
 	public static void main(String[] args) {
 		List<String> myList = new ArrayList<String>();
+	
 
 		myList.add("Pradeep");
 		myList.add("Praveen");
@@ -19,19 +20,15 @@ public class ArrayListExample {
 		myList.add("Ajay");
 		myList.add("John");
 		myList.add(6, "Naveen");
-
+	
 
 		ArrayList<String> newList = new ArrayList<String>();
 
 		newList.addAll(myList);
-	/*	
+
 		System.out.println("newList >> " + newList);
 		System.out.println(myList.remove("Ajay"));
-		System.out.println("myList > "+myList);
-		
-		
-
-		
+		System.out.println("myList > " + myList);
 
 		for (int i = 0; i < myList.size(); i++) {
 			System.out.println("Element at index " + i + " " + myList.get(i));
@@ -40,8 +37,6 @@ public class ArrayListExample {
 		for (String str : myList) {
 			System.out.println("Element >> " + str);
 		}
-		
-
 
 		Iterator<String> it = myList.iterator();
 		while (it.hasNext()) {
@@ -54,17 +49,16 @@ public class ArrayListExample {
 		while (listIterator.hasPrevious()) {
 			String element = listIterator.previous();
 			System.out.println("Iteraing via List iterator >> " + element);
-		}*/
+		}
+
 		Enumeration<String> et = Collections.enumeration(myList);
 
 		while (et.hasMoreElements()) {
 			String nextElement = et.nextElement();
 			System.out.println(nextElement);
 		}
-
 		Collections.sort(myList);
 
 		System.out.println("After sorting >> " + myList);
-
 	}
 }

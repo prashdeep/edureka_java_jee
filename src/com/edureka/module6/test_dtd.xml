@@ -7,8 +7,8 @@
 	<from>Hydrabad</from>
 	
 	<dob>
-		<date>dfdf</date>
 		<month>05</month>
+		<date>dfdf</date>
 		<year>1983</year>
 	</dob>
 	<Profession>Developer</Profession>
