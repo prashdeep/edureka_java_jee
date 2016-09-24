@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class MyFirstJDBCProgram {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
 		java.sql.PreparedStatement ps = null;
 		Connection conn = null;
 		try {
@@ -21,7 +21,7 @@ public class MyFirstJDBCProgram {
 			ps.execute();
 			ps.close();
 			conn.close();
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		} finally {
