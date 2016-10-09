@@ -8,6 +8,8 @@ import static javax.persistence.GenerationType.*;
 								// Class
 // name
 public class Person {
+	
+
 	@Id // Required annotation
 	@Column(name = "ID") // can be omitted if column name is same as field-name
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -59,5 +61,10 @@ public class Person {
 
 	public void setSalary(int salary) {
 		this.salary = salary;
+	}
+	
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", salary=" + salary + "]";
 	}
 }

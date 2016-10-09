@@ -15,7 +15,7 @@
 		
 		
 		<!-- Schema Validation -->
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		
 		
 		<!-- Debugging and Formatting -->

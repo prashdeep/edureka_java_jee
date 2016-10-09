@@ -72,7 +72,7 @@ public class Client {
 		Session session = factory.openSession();
 		Criteria cr = session.createCriteria(Employee.class);
 
-		cr.add(Restrictions.gt("salary", 2000));
+		cr.add(Restrictions.le("salary", 2000));
 		List employees = cr.list();
 
 		for (Iterator iterator = employees.iterator(); iterator.hasNext();) {

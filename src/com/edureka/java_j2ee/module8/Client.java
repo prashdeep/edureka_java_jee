@@ -31,7 +31,7 @@ public class Client {
 		example.updateRecord(id1, 5000);
 
 		/* Delete */
-		example.deleteRecord(id3);
+	  // example.deleteRecord(id3);
 
 		/* List the records */
 		example.listRecords();
@@ -67,8 +67,7 @@ public class Client {
 			Iterator itr = ppl.iterator();
 			while (itr.hasNext()) {
 				Person p = (Person) itr.next();
-				System.out.println("Id: " + p.getId() + ",  Name: " + p.getFirstName() + " " + p.getLastName()
-						+ ",  Salary: " + p.getSalary());
+				System.out.println(p);
 			}
 			tx.commit();
 		} catch (Exception e) {
