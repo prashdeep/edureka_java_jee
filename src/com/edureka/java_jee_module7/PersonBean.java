@@ -6,6 +6,7 @@ public class PersonBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	
 	private String firstName = null;
 	private String lastName = null;
 	private int age = 0;
@@ -33,4 +34,10 @@ public class PersonBean implements Serializable {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	
+	@Override
+	public String toString() {
+		return "PersonBean [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + "]";
+	}
+
 }

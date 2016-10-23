@@ -26,6 +26,10 @@ public class MyContextListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent sce) {
 
 		try {
+			/* For datasource configuration
+			 * ctx = new InitialContext();
+  			   DataSource ds = (DataSource) ctx.lookup("java:/comp/env/jdbc/MyLocalDB");
+			 */
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/students", "root", "welcome");
 

@@ -25,7 +25,7 @@ public class ServletContextExample extends HttpServlet {
 			res.setContentType("text/html");
 			PrintWriter out = res.getWriter();
 
-			// 1. ServletContext context = getServletContext();
+			// 1.ServletContext context = getServletConfig().getServletContext();
 			// 2. ServletContext context=req.getServletContext();
 			ServletContext context = getServletConfig().getServletContext();
 			context.setAttribute("username", "Pradeep");

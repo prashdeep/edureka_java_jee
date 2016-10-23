@@ -34,8 +34,10 @@ public class ServletContextServlet extends HttpServlet {
 		ServletContext context = getServletContext();
 
 		// Getting the value of the initialization parameter and printing it
-		String driverName = context.getInitParameter("dname");
-		pw.println("driver name is=" + driverName);
+		String driverName = context.getInitParameter("driver_name");
+		String username = context.getInitParameter("username");
+		String password = context.getInitParameter("password");
+		pw.println("driver name is= " + driverName+ "username = "+username);
 
 		pw.close();
 

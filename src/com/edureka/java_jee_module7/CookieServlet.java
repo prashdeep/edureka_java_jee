@@ -16,10 +16,12 @@ public class CookieServlet extends HttpServlet {
 		String name = request.getParameter("user");
 		String pass = request.getParameter("pass");
 
-		if (pass.equals("1234")) {
+		if (name.equalsIgnoreCase("pradeep") && pass.equals("1234")) {
 			Cookie ck = new Cookie("username", name);
 			response.addCookie(ck);
 			response.sendRedirect("cookieResponse");
+		}else{
+			throw new IllegalArgumentException("User is not authenticated");
 		}
 	}
 }
