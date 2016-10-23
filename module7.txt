@@ -1,0 +1,40 @@
+There are 4 ways to work with session
+	a. Cookie (Simple object which stores key value pairs)
+	b. url parameter (browser passes the key value as part in url)
+	c. Hidden form fields (just like html fields except it will not be visible on the screen)
+	d. Using HttpSession API. Still the sessionID will have to be passed by the browser.
+		a.1 request.getSession()
+		    check if there is already a session in which case the same session instance will be returned
+		a.2 request.getSession(true)
+		    same as a.1.
+		a.2 reques.getSession(false)
+		    if there is already a session associated with the request the same session will be returned else return null 
+
+ServletConfig
+	1. To configure the servlet
+	2. Can configure only string values as key value pair
+	3. It is specific to servlet and hence configured in the servlet section
+
+	4. configuration using the init-param with param-name as key and param-value as value.
+
+Servlet Context
+	1. To configure details at the context/application level
+	2. Again configure only string values using key value pairs
+	3. Generic for all the servlets for an application
+	4. Configured outside servlet tag with context-param and param-name and param-value	
+
+Scopes
+  request scope
+     Available for servlets to pass on the objects for the specific request
+
+     Using the request.setAttribute("key", value)
+     value can be any java object
+
+     To get the object from the scope use the request.getAttribute("key")
+     The objects will be garbage collected after the request has been fullfilled and the response is sent to the user
+
+filter
+	To write high cohesive business functions
+	To reduce boilerplate code
+	To plug and play different filters before reaching the actual servlet
+	The servlet is not aware of the filters
