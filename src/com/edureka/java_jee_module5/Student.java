@@ -96,8 +96,7 @@ public class Student implements Comparable<Student>{
 
 	@Override
 	public int compareTo(Student o) {
-		// TODO Auto-generated method stub
-		return new Integer(this.getAge()).compareTo(new Integer(o.getAge()));
+		return new String(this.getName()).compareTo(new String(o.getName()));
 	}
 
 }
