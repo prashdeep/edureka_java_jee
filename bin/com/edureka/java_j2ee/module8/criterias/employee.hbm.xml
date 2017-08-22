@@ -5,8 +5,7 @@
 
 <hibernate-mapping>
    <class name="com.edureka.java_j2ee.module8.criterias.Employee" table="EMPLOYEE_CRITERIA">
-
-      <id name="id" type="int" column="id">
+    <id name="id" type="int" column="id">
          <generator class="increment"/>
       </id>
       <property name="firstName" column="first_name" type="string"/>

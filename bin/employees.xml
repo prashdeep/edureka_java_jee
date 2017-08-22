@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <employees>
-    <employeeMap>
-        <entry>
-            <key>1</key>
-            <value>
-                <id>1</id>
-                <firstName>Pradeep</firstName>
-                <lastName>Kumar</lastName>
-                <income>100.0</income>
-            </value>
-        </entry>
-        <entry>
-            <key>2</key>
-            <value>
-                <id>2</id>
-                <firstName>John</firstName>
-                <lastName>Marshall</lastName>
-                <income>200.0</income>
-            </value>
-        </entry>
-    </employeeMap>
+    <employee>
+        <id>1</id>
+        <firstName>Pradeep</firstName>
+        <lastName>Kumar</lastName>
+        <income>900000.0</income>
+    </employee>
+    <employee>
+        <id>2</id>
+        <firstName>Praveen</firstName>
+        <lastName>Gupta</lastName>
+        <income>8000000.0</income>
+    </employee>
+    <employee>
+        <id>2</id>
+        <firstName>Laxman</firstName>
+        <lastName>Shah</lastName>
+        <income>2000000.0</income>
+    </employee>
 </employees>

@@ -23,7 +23,7 @@ st.execute("create table student(no varchar(10),name varchar(20))");
 System.out.println("table created");
 */   
 
-st.executeUpdate("insert into student values('42','Pradeep')");
+st.executeUpdate("insert into students values(42,'Pradeep')");
 System.out.println("  row inserted");
 
 // st.executeUpdate("update student set name='Pavas sisaudia' where name='Pavas'");

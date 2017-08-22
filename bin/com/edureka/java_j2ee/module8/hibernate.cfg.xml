@@ -2,6 +2,7 @@
 <!DOCTYPE hibernate-configuration PUBLIC
 		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+		
 <hibernate-configuration>
 	<session-factory>
 		<!-- Database Type -->
@@ -15,7 +16,7 @@
 		
 		
 		<!-- Schema Validation -->
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		
 		
 		<!-- Debugging and Formatting -->
