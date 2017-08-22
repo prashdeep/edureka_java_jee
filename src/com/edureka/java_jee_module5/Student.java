@@ -96,7 +96,7 @@ public class Student implements Comparable<Student>{
 
 	@Override
 	public int compareTo(Student o) {
-		return new String(this.getName()).compareTo(new String(o.getName()));
+		return new String(this.getGrade()).compareTo(new String(o.getGrade()));
 	}
 
 }

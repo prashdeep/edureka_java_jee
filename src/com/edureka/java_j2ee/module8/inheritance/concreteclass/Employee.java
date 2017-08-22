@@ -1,6 +1,6 @@
 package com.edureka.java_j2ee.module8.inheritance.concreteclass;
 
-public class Employee {
+public abstract class Employee {
 	private int id;
 	private String name;
 

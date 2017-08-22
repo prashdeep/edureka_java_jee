@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class GsonExample {
+	
 	public static void main(String[] args) {
 
 		DataObject obj = new DataObject();
@@ -32,7 +33,7 @@ public class GsonExample {
 
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-		objectToJson(obj, gson);
+		//objectToJson(obj, gson);
 
 		jsonToObject(obj);
 

@@ -35,5 +35,9 @@ public class ImplementationTwo implements ICalculator, PrintInterface {
 		System.out.println("Inside print two");
 		
 	}
+	
+	public void test(){
+		System.out.println("Testing accuracy..");
+	}
 
 }

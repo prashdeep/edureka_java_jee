@@ -6,9 +6,6 @@ public class CalculatorClient {
 	public static void main(String[] args) {
 		ICalculator cal = getImplementigClass();
 		System.out.println(cal.add(4, 8));
-		cal.print();
-		;
-
 	}
 
 	private static ICalculator getImplementigClass() {
@@ -16,6 +13,8 @@ public class CalculatorClient {
 		String str = sc.next();
 		if (str.equals("one")) {
 			return new MyConcreteImplOne();
+		} else if (str.equals("sci")) {
+			return new ScintificCalc();
 		} else {
 			return new ImplementationTwo();
 		}

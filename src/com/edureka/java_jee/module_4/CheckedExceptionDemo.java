@@ -16,7 +16,8 @@ public class CheckedExceptionDemo {
 			file = new FileReader(path);
 			file.read();
 		} catch (FileNotFoundException exception){
-			throw new MyBuinessException("The server is down. Please tr after some time.");
+			//throw new MyBuinessException("The server is down. Please tr after some time.");
+			System.out.println("Cannot access the file");
 		} catch (IOException e)	{
 			e.printStackTrace();
 		} finally{

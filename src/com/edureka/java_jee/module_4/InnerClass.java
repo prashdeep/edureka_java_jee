@@ -1,31 +1,30 @@
-package com.edureka.java_jee.module_4;
+package com.edureka.java_jee.module_4;import com.edureka.java_jee.module_4.MyOuterClass.MyInnerClassDemo;
 
- class MyOuterClass {
+class MyOuterClass {
+
 	private String name;
-
 	public int age;
-	
-	public void outerMethod(){
-		MyInnerClassDemo obj = new MyInnerClassDemo();
-		obj.printValues();
+
+	private static String name2 = "Pradeep";
+
+	public void outerMethod() {
+
+		MyInnerClassDemo.printValues();
 	}
 
-	private class MyInnerClassDemo {
-		MyInnerClassDemo(){
-			name="Pradeep";
-			age=32;
-		}
-		public void printValues() {
-			System.out.println("The values of name and age are " + name + " , " + age);
-		}
+	public static void display() {
+
 	}
-	private class MyInnerClassDemo2 {
-		MyInnerClassDemo2(){
-			name="Pradeep";
-			age=32;
-		}
-		public void printValues() {
-			System.out.println("The values of name and age are " + name + " , " + age);
+
+	public static class MyInnerClassDemo {
+		/**
+		 * MyInnerClassDemo() { name = "Pradeep"; age = 32; }
+		 **/
+
+		public static void printValues() {
+			// System.out.println("The values of name and age are " + name + " ,
+			// " + age);
+			System.out.println(name2);
 		}
 	}
 }
@@ -33,7 +32,11 @@ package com.edureka.java_jee.module_4;
 public class InnerClass {
 	public static void main(String[] args) {
 
-		MyOuterClass innerObj = new MyOuterClass();
-		innerObj.outerMethod();
+		// MyOuterClass innerObj = new MyOuterClass();
+		// innerObj.outerMethod();
+
+		MyOuterClass.MyInnerClassDemo innerObj = new MyOuterClass.MyInnerClassDemo();
+		innerObj.printValues();
+		
 	}
 }

@@ -1,52 +1,115 @@
 package com.edureka.java_j2ee.module8.onetomany;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.*;
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.IDENTITY;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table
-public class Department {
+@Table(name = "stock_daily_record")
+
+public class StockDailyRecord implements java.io.Serializable {
+
+	private Integer recordId;
+	private Stock stock;
+	private Float priceOpen;
+	private Float priceClose;
+	private Float priceChange;
+	private Long volume;
+	private transient Date date;
+
+	public StockDailyRecord() {
+	}
+
+	public StockDailyRecord(Stock stock, Date date) {
+		this.stock = stock;
+		this.date = date;
+	}
+
+	public StockDailyRecord(Stock stock, Float priceOpen, Float priceClose,
+			Float priceChange, Long volume, Date date) {
+		this.stock = stock;
+		this.priceOpen = priceOpen;
+		this.priceClose = priceClose;
+		this.priceChange = priceChange;
+		this.volume = volume;
+		this.date = date;
+	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-
-	private String name;
-
-	@OneToMany(mappedBy = "department", cascade = CascadeType.PERSIST)
-	private List<Employee> employees = new ArrayList<Employee>();
-
-	public Department() {
-		super();
+	@GeneratedValue(strategy = IDENTITY)
+	@Column(name = "RECORD_ID", unique = true, nullable = false)
+	public Integer getRecordId() {
+		return this.recordId;
 	}
 
-	public Department(String name) {
-		this.name = name;
+	public void setRecordId(Integer recordId) {
+		this.recordId = recordId;
 	}
 
-	public Long getId() {
-		return id;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "STOCK_ID", nullable = false)
+	public Stock getStock() {
+		return this.stock;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setStock(Stock stock) {
+		this.stock = stock;
 	}
 
-	public String getName() {
-		return name;
+	@Column(name = "PRICE_OPEN", precision = 6)
+	public Float getPriceOpen() {
+		return this.priceOpen;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setPriceOpen(Float priceOpen) {
+		this.priceOpen = priceOpen;
 	}
 
-	public List<Employee> getEmployees() {
-		return employees;
+	@Column(name = "PRICE_CLOSE", precision = 6)
+	public Float getPriceClose() {
+		return this.priceClose;
 	}
 
-	public void setEmployees(List<Employee> employees) {
-		this.employees = employees;
+	public void setPriceClose(Float priceClose) {
+		this.priceClose = priceClose;
 	}
+
+	@Column(name = "PRICE_CHANGE", precision = 6)
+	public Float getPriceChange() {
+		return this.priceChange;
+	}
+
+	public void setPriceChange(Float priceChange) {
+		this.priceChange = priceChange;
+	}
+
+	@Column(name = "VOLUME")
+	public Long getVolume() {
+		return this.volume;
+	}
+
+	public void setVolume(Long volume) {
+		this.volume = volume;
+	}
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "DATE", nullable = false, length = 10)
+	
+	public Date getDate() {
+		return this.date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 }

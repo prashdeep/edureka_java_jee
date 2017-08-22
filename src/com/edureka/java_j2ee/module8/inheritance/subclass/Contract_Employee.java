@@ -1,6 +1,11 @@
 package com.edureka.java_j2ee.module8.inheritance.subclass;
 
 public class Contract_Employee extends Employee {
+	@Override
+	public String toString() {
+		return "Contract_Employee [pay_per_hour=" + pay_per_hour + ", contract_duration=" + contract_duration + "]";
+	}
+
 	private float pay_per_hour;
 	private String contract_duration;
 

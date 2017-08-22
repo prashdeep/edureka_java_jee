@@ -33,7 +33,7 @@ class Producer implements Runnable {
 				taskQueue.wait();
 			}
 
-			Thread.sleep(1000);
+			Thread.sleep(10000);
 			taskQueue.add(i);
 			System.out.println("Produced: " + i);
 			taskQueue.notifyAll();

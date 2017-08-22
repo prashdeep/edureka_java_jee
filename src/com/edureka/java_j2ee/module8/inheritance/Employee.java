@@ -4,11 +4,11 @@ public abstract class Employee {
 	private int id;
 	private String name;
 
-	protected int getId() {
+	public int getId() {
 		return id;
 	}
 
-	protected void setId(int id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

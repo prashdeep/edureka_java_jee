@@ -1,6 +1,6 @@
 package com.edureka.java_jee.module_4;
 
-public interface ICalculator extends PrintInterface, OtherInterface{
+public interface ICalculator extends  OtherInterface{
 
 	int MY_CONSTANT = 40;
 
@@ -11,7 +11,4 @@ public interface ICalculator extends PrintInterface, OtherInterface{
 	int multiply(int a, int b);
 
 	int mod(int a, int b);
-	
-	public void print();
-
 }

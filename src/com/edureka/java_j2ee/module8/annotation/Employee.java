@@ -1,7 +1,12 @@
 package com.edureka.java_j2ee.module8.annotation;
 
-import javax.persistence.*;
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "EMPLOYEE")
@@ -19,6 +24,28 @@ public class Employee {
 
 	@Column(name = "salary")
 	private int salary;
+	
+	@Column(name = "age")
+	private Integer age;
+	
+	@Column(name = "DOJ")
+	private Date doj;
+
+	public Date getDoj() {
+		return doj;
+	}
+
+	public void setDoj(Date doj) {
+		this.doj = doj;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 
 	public Employee() {
 	}

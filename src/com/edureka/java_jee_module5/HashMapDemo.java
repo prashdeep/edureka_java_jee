@@ -15,11 +15,15 @@ public class HashMapDemo {
 		praveen.setAge(30);
 		praveen.setGrade("3rd Sem");
 
-		Hashtable<String, Student > map = new Hashtable<String,  Student>();
+		Hashtable<String, Student > map = new Hashtable<>();
 		map.put("Pradeep", pradeep );
 		map.put( "Praveen", praveen);
 
 		System.out.println(map.keySet());
+		
+		System.out.println("********************************");
+		System.out.println(map.values());
+		System.out.println("********************************");
 		
 		Student student = map.get("Pradeep");
 		System.out.println(student);

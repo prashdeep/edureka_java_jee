@@ -34,8 +34,6 @@ public class StoreData {
 
 		Transaction t = session.beginTransaction();
 
-		
-
 		Regular_Employee e2 = new Regular_Employee();
 		e2.setName("Nala");
 		e2.setSalary(50000);
@@ -45,13 +43,14 @@ public class StoreData {
 		e3.setName("Rajan");
 		e3.setPay_per_hour(1000);
 		e3.setContract_duration("15 hours");
-
-	
 		session.persist(e2);
 		session.persist(e3);
-
 		t.commit();
-		session.close();
+
+		Employee employee = (Employee) session.load(Employee.class, 2);
+		System.out.println(employee);
 		System.out.println("success");
+		session.close();
+
 	}
 }

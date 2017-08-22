@@ -7,20 +7,19 @@ public class PriorityQueueDemo {
 		// create priority queue
 		PriorityQueue<Integer> prq = new PriorityQueue<Integer>();
 
-		// insert values in the queue
-		for (int i = 1; i <= 10; i++) {
-			prq.add(i);
+		for (int loop = 10; loop > 0; loop--) {
+			prq.add(loop);
 		}
+		System.out.println(prq.size());
+		int size = prq.size();
 
-		System.out.println("Initial priority queue values are: " + prq);
+		// System.out.println(prq.peek());
 
-		// get the head from the queue
-		Integer head = prq.poll();
+		for (int index = 0; index < size; index++) {
+			// System.out.println(prq.poll());
+			prq.poll();
+		}
+		System.out.println(prq);
 
-		System.out.println("Head of the queue is: " + head);
-
-		System.out.println("Priority queue values after poll: " + prq);
-		System.out.println("Now the head points to  >> "+prq.peek());
-		System.out.println("Priority queue values after poll: " + prq);
 	}
 }

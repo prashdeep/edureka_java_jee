@@ -1,6 +1,11 @@
 package com.edureka.java_j2ee.module8.inheritance.subclass;
 
 public class Employee {
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + "]";
+	}
+
 	private int id;
 	private String name;
 

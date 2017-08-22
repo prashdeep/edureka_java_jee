@@ -6,5 +6,9 @@ public class MaxAgeException extends Exception {
 		// TODO Auto-generated constructor stub
 		super(string);
 	}
+	
+	public MaxAgeException(){
+		super();
+	}
 
 }

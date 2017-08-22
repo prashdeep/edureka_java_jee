@@ -1,57 +1,64 @@
 
 public class Person {
-
-	private String name;
-	private String sex;
-	private int age;
-	private String occupation;
-
-	private boolean permanent;
-
-	Person() {
-		permanent = true;
-		sex = "Male";
-		System.out.println("This is called when new person is called..");
+	
+	Person (String name, int age, String occupation){
+		new Person(name, age, null, occupation);
 	}
-
-	public boolean isPermanent() {
-		return permanent;
-	}
-
-	public void setPermanent(boolean permanent) {
-		this.permanent = permanent;
-	}
-
-	public void setOccupation(String occupation) {
+	
+	Person (String nme, int age, String sex, String occupation){
+		name = nme;
+		this.age = age;
 		this.occupation = occupation;
+		this.sex = sex;
 	}
+	
+	Person (String name ,int age){
+		this.name = name;
+		this.age = age;
+	}
+	
 
-	public String getName() {
+
+	// default values
+	// String/Object - null;
+	// int  - 0;
+	// boolean - false
+	// long = 0
+	// double/float - 0.0
+	String name;
+	String sex;
+	int age;
+	String occupation;
+
+	String getName() {
 		return this.name;
 	}
 
-	public void setName(String name) {
+	void setName(String name) {
 		this.name = name;
 	}
 
-	public String getSex() {
-		return this.sex;
+	String getSex() {
+		return sex;
 	}
 
-	public void setSex(String sex) {
+	void setSex(String sex) {
 		this.sex = sex;
 	}
 
-	public int getAge() {
-		return this.age;
+	int getAge() {
+		return age;
 	}
 
-	public void setAge(int age) {
+	void setAge(int age) {
 		this.age = age;
 	}
 
-	public String getOccupation() {
-		return this.occupation;
+	String getOccupation() {
+		return occupation;
 	}
 
+	void setOccupation(String occupation) {
+		this.occupation = occupation;
+	}
 }

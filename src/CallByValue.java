@@ -1,17 +1,20 @@
 
 public class CallByValue {
-	
-	public static int data = 50;
-	
-	public static void setData(int data){
-		data = data;
-	}
-	
+
 	public static void main(String[] args) {
-	
-		System.out.println("The initial value of data is "+data);
-		setData(100);
-		System.out.println("The final value of data is "+data);
+
+		CallByValue obj = new CallByValue();
+		int data = 50;
+		System.out.println("The initial value of data is " + data);
+		obj.modifyData(data);
+		System.out.println("The final value of data is " + data);
+	}
+
+	public void modifyData(int data) {
+		System.out.println("The value of data inside the method is "+data);
+		System.out.println("Changing the value of data >> ");
+		data = 30;
+		
 	}
 
 }

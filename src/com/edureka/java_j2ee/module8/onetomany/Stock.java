@@ -1,58 +1,88 @@
 package com.edureka.java_j2ee.module8.onetomany;
 
-import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.IDENTITY;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table
-public class Employee {
+@Table(name = "stock", uniqueConstraints = { @UniqueConstraint(columnNames = "STOCK_NAME"),
+		@UniqueConstraint(columnNames = "STOCK_CODE") })
+public class Stock implements java.io.Serializable {
+
+	
+	private Integer stockId;
+	private String stockCode;
+	private String stockName;
+
+	private Set<StockDailyRecord> stockDailyRecords = new HashSet<StockDailyRecord>(0);
+
+	public Stock() {
+	}
+
+	public Stock(String stockCode, String stockName) {
+		this.stockCode = stockCode;
+		this.stockName = stockName;
+	}
+
+	public Stock(String stockCode, String stockName, Set<StockDailyRecord> stockDailyRecords) {
+		this.stockCode = stockCode;
+		this.stockName = stockName;
+		this.stockDailyRecords = stockDailyRecords;
+	}
+
 	@Id
-	@GeneratedValue
-	private Long id;
-
-	private String name;
-
-	@ManyToOne
-	private Department department;
-
-	public Employee() {
+	@GeneratedValue(strategy = IDENTITY)
+	@Column(name = "STOCK_ID", unique = true, nullable = false)
+	public Integer getStockId() {
+		return this.stockId;
 	}
 
-	public Employee(String name, Department department) {
-		this.name = name;
-		this.department = department;
+	public void setStockId(Integer stockId) {
+		this.stockId = stockId;
 	}
 
-	public Employee(String name) {
-		this.name = name;
+	@Column(name = "STOCK_CODE", unique = true, nullable = false, length = 10)
+	public String getStockCode() {
+		return this.stockCode;
 	}
 
-	public Long getId() {
-		return id;
+	public void setStockCode(String stockCode) {
+		this.stockCode = stockCode;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	@Column(name = "STOCK_NAME", unique = true, nullable = false, length = 20)
+	public String getStockName() {
+		return this.stockName;
 	}
 
-	public String getName() {
-		return name;
+	public void setStockName(String stockName) {
+		this.stockName = stockName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "stock", cascade = CascadeType.ALL)
+	public Set<StockDailyRecord> getStockDailyRecords() {
+		return this.stockDailyRecords;
 	}
 
-	public Department getDepartment() {
-		return department;
+	public void setStockDailyRecords(Set<StockDailyRecord> stockDailyRecords) {
+		this.stockDailyRecords = stockDailyRecords;
 	}
-
-	public void setDepartment(Department department) {
-		this.department = department;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", department=" + department.getName() + "]";
+		return "Stock [stockId=" + stockId + ", stockCode=" + stockCode + ", stockName=" + stockName
+				+ ", stockDailyRecords=" + stockDailyRecords + "]";
 	}
+
 
 }

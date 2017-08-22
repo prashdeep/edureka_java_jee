@@ -1,7 +1,7 @@
 package com.edureka.java_jee.module_4.threads;
 
 class Printer {
-	public void printCount() {
+	public synchronized void printCount() {
 		try {
 			for (int i = 5; i > 0; i--) {
 				System.out.println("Counter for "+Thread.currentThread().getName()+" ---   " + i);
@@ -24,9 +24,9 @@ class PrinterService extends Thread {
 	}
 
 	public void run() {
-		synchronized (printer) {
+	
 			printer.printCount();
-		}
+
 		System.out.println("Thread " + threadName + " exiting.");
 	}
 

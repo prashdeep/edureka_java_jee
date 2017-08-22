@@ -1,14 +1,18 @@
 package com.edureka.java_jee.module_4;
 
 import java.util.Scanner;
+import static java.lang.System.*;
 
 public class DBInterfaceClient {
 
 	public static void main(String[] args)
 			throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 
-		System.out.println("Enter your implementation class ..");
-		Scanner scanner = new Scanner (System.in);
+		out.println("Enter your implementation class ..");
+		
+		Scanner scanner = new Scanner (in);
+
+		
 		String choice = scanner.next();
 		scanner.close();
 		String className = "com.edureka.java_jee.module_4.MySqlExecutorImpl";

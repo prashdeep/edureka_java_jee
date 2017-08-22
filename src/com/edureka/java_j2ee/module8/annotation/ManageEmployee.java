@@ -36,6 +36,7 @@ public class ManageEmployee {
 
 		/* Add few employee records in database */
 		Integer empID1 = ME.addEmployee("Zara", "Ali", 1000);
+		
 		Integer empID2 = ME.addEmployee("Daisy", "Das", 5000);
 		Integer empID3 = ME.addEmployee("John", "Paul", 10000);
 
@@ -56,6 +57,8 @@ public class ManageEmployee {
 			employee1.setFirstName(fname);
 			employee1.setLastName(lname);
 			employee1.setSalary(salary);
+			employee1.setAge(45);
+			employee1.setDoj(new Date());
 			employeeID = (Integer) session.save(employee1);
 			tx.commit();
 		} catch (Exception e) {

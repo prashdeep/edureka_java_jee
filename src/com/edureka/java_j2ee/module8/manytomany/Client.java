@@ -65,10 +65,13 @@ public class Client {
 
 		trevorsBooks.add(book);
 		trevorsBooks.add(book2);
+		
 		johnsBooks.add(book2);
 		johnsBooks.add(book3);
+		
 		author.setBooks(trevorsBooks);
 		author2.setBooks(johnsBooks);
+		
 		book.setAuthors(howToProgramWithJavaAuthor);
 		book2.setAuthors(howToProgramWithJava2ndAuthors);
 		book3.setAuthors(howToPlayGuitarAuthor);

@@ -1,17 +1,20 @@
 <?xml version="1.0"?>
 
-<!DOCTYPE note1 [
-<!ELEMENT note1 (to,from,location,heading,body)>
-<!ELEMENT to (#PCDATA)>
-<!ELEMENT from (#PCDATA)>
-<!ELEMENT location (#PCDATA)>
-<!ELEMENT heading (#PCDATA)>
-<!ELEMENT body (#PCDATA)>
+<!DOCTYPE note [
+  <!ELEMENT note (to, from, heading, body)>
+  <!ELEMENT to (#PCDATA)>
+  <!ELEMENT from (#PCDATA)>
+  <!ELEMENT heading (#PCDATA)>
+  <!ELEMENT body (jist?, p*)>
+  
 ]>
-<note1>
-<to>Pradeep</to>
-<from>Vivek</from>
-<location>bangalore</location>
-<heading>Reminder</heading>
-<body>Will be attending the class today</body>
-</note1>
+<note>
+	<to>Tove</to>
+	<from>Pradeep</from>
+	<heading>Reminder</heading>
+	<body>
+	    <jist>MyBlog heading</jist>
+		<p>This is the first paragraph</p>
+		<p>This is the second paragraph</p>
+	</body>
+</note>

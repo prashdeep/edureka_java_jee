@@ -5,20 +5,20 @@ public class ExceptionDemo {
 		int arg1 = 12;
 		int arg2 = 0;
 		int result = 0;
-		int age=17;
-		
-		if(age < 18){
+		int age = 2;
+
+		if (age < 28) {
 			throw new InvalidAgeException("The minimum age for voting should be 18.");
 		}
-		if(age > 100){
-			throw new MaxAgeException("The minimum age for voting should be 18.");
+		if (age > 100) {
+			throw new MaxAgeException("The max age for voting should be 65.");
 		}
 		try {
 			result = arg1 / arg2;
-	 	}catch (ArithmeticException exception) {
+		} catch (ArithmeticException exception) {
 			System.out.println("Number cannot be divided by 0");
 			System.out.println(exception.getMessage());
-			
+
 		}
 
 		System.out.println("This statement will be printed even in case of exception....");

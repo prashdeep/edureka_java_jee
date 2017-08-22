@@ -11,7 +11,7 @@ public class FileWriterDemo {
 
 	public static void main(String args[]) throws IOException {
 
-		File file = new File("c:\\data_files\\Hello1.txt");
+		File file = new File("c:\\data_files\\myProject.properties");
 		// creates the file
 		file.createNewFile();
 		BufferedReader in = null;

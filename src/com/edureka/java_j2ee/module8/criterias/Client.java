@@ -71,12 +71,13 @@ public class Client {
 	public void DisplayRecords() throws HibernateException {
 		Session session = factory.openSession();
 		Criteria cr = session.createCriteria(Employee.class);
+		cr.add(Restrictions.ge("salary", 5000));
+		List<Employee> employees = cr.list();
+		
+		//List<Employee> empList = createQuery("FROM EMPLOYEE where salaray >= 2000").list()
 
-		cr.add(Restrictions.le("salary", 2000));
-		List employees = cr.list();
-
-		for (Iterator iterator = employees.iterator(); iterator.hasNext();) {
-			Employee employee = (Employee) iterator.next();
+		for (Iterator<Employee> iterator = employees.iterator(); iterator.hasNext();) {
+			Employee employee = iterator.next();
 			System.out.print("First Name: " + employee.getFirstName());
 			System.out.print("  Last Name: " + employee.getLastName());
 			System.out.println("  Salary: " + employee.getSalary());

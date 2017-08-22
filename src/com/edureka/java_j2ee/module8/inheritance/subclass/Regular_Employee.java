@@ -1,6 +1,11 @@
 package com.edureka.java_j2ee.module8.inheritance.subclass;
 
 public class Regular_Employee extends Employee {
+	@Override
+	public String toString() {
+		return "Regular_Employee [salary=" + salary + ", bonus=" + bonus + "]";
+	}
+
 	private float salary;
 	private int bonus;
 

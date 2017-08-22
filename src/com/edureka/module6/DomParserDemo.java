@@ -22,7 +22,7 @@ public class DomParserDemo {
 			System.out.println("----------------------------");
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 				System.out.println( nList.item(temp).getNodeType()==Node.ELEMENT_NODE);
-				/*Node nNode = nList.item(temp);
+				Node nNode = nList.item(temp);
 				System.out.println("\nCurrent Element :" + nNode.getNodeName());
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 					Element eElement = (Element) nNode;
@@ -34,7 +34,7 @@ public class DomParserDemo {
 					System.out.println(
 							"Nick Name : " + eElement.getElementsByTagName("nickname").item(0).getTextContent());
 					System.out.println("Marks : " + eElement.getElementsByTagName("marks").item(0).getTextContent());
-				}*/
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

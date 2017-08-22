@@ -24,6 +24,7 @@ public class JDBCExample {
 			// STEP 3: Open a connection
 			System.out.println("Connecting to database...");
 			conn = DriverManager.getConnection(DB_URL, USER, PASS);
+		
 
 			// STEP 4: Execute a query
 			System.out.println("Creating database...");
@@ -31,6 +32,7 @@ public class JDBCExample {
 
 			String sql = "CREATE DATABASE STUDENTS";
 			stmt.executeUpdate(sql);
+		
 			System.out.println("Database created successfully...");
 		} catch (SQLException se) {
 			// Handle errors for JDBC

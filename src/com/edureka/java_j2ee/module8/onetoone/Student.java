@@ -14,6 +14,7 @@ public class Student {
 
 	private long studentId;
 	private String studentName;
+	@OneToOne(cascade = CascadeType.ALL)
 	private Address studentAddress;
 
 	public Student() {
@@ -44,7 +45,7 @@ public class Student {
 		this.studentName = studentName;
 	}
 
-	@OneToOne(cascade = CascadeType.ALL)
+	
 	public Address getStudentAddress() {
 		return this.studentAddress;
 	}

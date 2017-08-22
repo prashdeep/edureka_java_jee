@@ -1,7 +1,5 @@
 package com.edureka.java_j2ee.module8.inheritance.concreteclass.annotation;
 
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;

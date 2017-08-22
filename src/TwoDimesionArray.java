@@ -1,10 +1,16 @@
 
-public class TwoDimesionArray {
+ public class TwoDimesionArray {
 
-	public static void main(String[] args) {
+	public static void main(String[] argv) {
+		
+		int result = 0;
+		for (int i = 0; i < argv.length; i++){
+			result = result +Integer.parseInt(argv[i]);
+		}
+		System.out.println("Result >> "+result);
 		int row = 4;
 		int col = 4;
-		int[][] twoDimArray = new int[][] { { 1, 2, 3 }, { 2, 3, 4 }, { 4, 3, 4 }, { 7, 6, 5, 3 } };
+		int[][] twoDimArray = new int[4][4]; 
 
 		int initValue = 10;
 
@@ -16,12 +22,19 @@ public class TwoDimesionArray {
 		}
 
 		// print the elements of the array
-		for (int x = 0; x < row; x++) {
+		/*for (int x = 0; x < row; x++) {
 			for (int y = 0; y < col; y++) {
 				System.out.print(twoDimArray[x][y] + " ");
 			}
 			System.out.println();
-		}
+			
+			//java 7/8 feature
+			Long salary = 10_000_000_000l;
+		}*/
+		
+		//variable naming rules
+		int $_a2lphan3434$_umeric = 0;
 	}
 
 }
+

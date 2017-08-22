@@ -2,6 +2,7 @@ package com.edureka.java_j2ee.module8.inheritance;
 
 public class Contract_Employee extends Employee {
 	private float pay_per_hour;
+	
 	private String contract_duration;
 
 	public float getPay_per_hour() {
