@@ -1,31 +1,28 @@
 package com.edureka.java_jee_module5;
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.List;
 
 public class LinkedListDemo {
 
 	public static void main(String[] args) {
-		LinkedList<String> list = new LinkedList<String>();
-		list.add("Pradeep");
-		list.add("Praveen");
-		list.add("John");
-		list.add("Bob");
-
-		//System.out.println(list);
+		List<String> linkedList = new ArrayList<>();
+		linkedList.add("One");
+		linkedList.add("two");
+		linkedList.add("three");
 		
-		Iterator<String> it = list.iterator();
+		//System.out.println(linkedList.size());
+		Iterator<String> iterator = linkedList.iterator();
 		
-		list.push("");;
-		
-		
-		while(it.hasNext()){
-			String name = it.next();
-			System.out.println("The name is "+name);
+		while(iterator.hasNext()) {
+			String element = iterator.next();
+			//System.out.println(element);
 		}
-		
-		list.push("Ramesh");
-		System.out.println(list);
+		Employee emp1 = new Employee(12, "Pradeep", 23, "HR");
+		Employee emp3 = new Employee(12, "Pradeep", 23, "HR");
+		Employee emp2 = emp1;
+		System.out.println(emp1.equals(emp3));
 		
 	}
 

@@ -26,7 +26,17 @@ public class DomCreateExample {
 			// supercars element
 			Element supercar = doc.createElement("supercars");
 			rootElement.appendChild(supercar);
+			// supercars element
+			Element supercar2 = doc.createElement("supercars");
+			rootElement.appendChild(supercar);
 
+			Element name = doc.createElement("name");
+			Element model = doc.createElement("model");
+			supercar2.appendChild(name);
+			supercar2.appendChild(model);
+			Element chassiNumber = doc.createElement("chassi");
+			supercar2.appendChild(chassiNumber);
+			rootElement.appendChild(supercar2);
 			// setting attribute to element
 			Attr attr = doc.createAttribute("company");
 			attr.setValue("Ferrari");
@@ -51,9 +61,9 @@ public class DomCreateExample {
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			Transformer transformer = transformerFactory.newTransformer();
 			DOMSource source = new DOMSource(doc);
-			StreamResult result = new StreamResult(
-					new File("C://Users//Prashdeep//my_projects//my-first-app//src//cars.xml"));
+			StreamResult result = new StreamResult(new File("c:/data_files/cars.xml"));
 			transformer.transform(source, result);
+
 			// Output to console for testing
 			StreamResult consoleResult = new StreamResult(System.out);
 			transformer.transform(source, consoleResult);

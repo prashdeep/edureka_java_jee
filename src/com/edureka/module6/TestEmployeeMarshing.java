@@ -47,7 +47,7 @@ public class TestEmployeeMarshing {
 		JAXBContext jaxbContext = JAXBContext.newInstance(Employees.class);
 		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 		Employees emps = (Employees) jaxbUnmarshaller
-				.unmarshal(new File("C://Users//Prashdeep//my_projects//my-first-app//src//employees.xml"));
+				.unmarshal(new File("C://java_projects//src//employees.xml"));
 
 		for (Employee emp : emps.getEmployees()) {
 			System.out.println(emp.getId());
@@ -63,6 +63,6 @@ public class TestEmployeeMarshing {
 
 		jaxbMarshaller.marshal(employees, System.out);
 		jaxbMarshaller.marshal(employees,
-				new File("C://Users//Prashdeep//my_projects//my-first-app//src//employees.xml"));
+				new File("C://java_projects//src//employees.xml"));
 	}
 }

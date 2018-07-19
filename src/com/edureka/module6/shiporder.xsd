@@ -7,11 +7,17 @@
       <xs:element name="shipto">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="address" type="xs:string" minOccurs="1" maxOccurs="4"/>
-            <xs:element name="city" type="xs:string"/>
-            <xs:element name="country" type="xs:string"/>
-          </xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+            <xs:element name="address" minOccurs="1" maxOccurs="unbounded">
+            	<xs:complexType>
+            		<xs:sequence>
+	            		<xs:element name="city" type="xs:string"/>
+	            		<xs:element name="state" type="xs:string"/>
+	            		<xs:element name="country" type="xs:string"/>
+            		</xs:sequence>
+            	</xs:complexType>
+            </xs:element>
+           </xs:sequence>
         </xs:complexType>
       </xs:element>
       <xs:element name="item" maxOccurs="unbounded" minOccurs="1">
@@ -28,5 +34,4 @@
     <xs:attribute name="orderid" type="xs:string" use="optional"/>
   </xs:complexType>
 </xs:element>
-
 </xs:schema>

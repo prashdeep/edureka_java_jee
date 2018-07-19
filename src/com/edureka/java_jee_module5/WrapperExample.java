@@ -5,7 +5,11 @@ public class WrapperExample {
 	public static void main(String[] args) {
 		int i = 10;
 		Integer I = new Integer(i);
-		System.out.println(i);
+		Integer integerObj = Integer.valueOf(i);
+		
+		int intValue = integerObj.intValue();
+		
+		Integer parsedInteger = Integer.parseInt("3434");
 		
 		String iStr = "53";
 		Integer intFromStr = new Integer(iStr);

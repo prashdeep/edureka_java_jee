@@ -7,20 +7,21 @@
 		<!-- Database Type -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		
+
 		<!-- Database Properties -->
 		<property name="hibernate.connection.url">jdbc:mysql://localhost/STUDENTS</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">welcome</property>
-		
-		
+
+
 		<!-- Schema Validation -->
 		<property name="hbm2ddl.auto">create</property>
-		
-		
+
+
 		<!-- Debugging and Formatting -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-		<mapping resource="com/edureka/java_j2ee/module8/xml/person.hbm.xml"/>
+		
+		<mapping resource="com/edureka/java_j2ee/module8/xml/person.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

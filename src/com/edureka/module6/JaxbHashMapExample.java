@@ -16,13 +16,13 @@ public class JaxbHashMapExample {
 		emp1.setId(1);
 		emp1.setFirstName("Pradeep");
 		emp1.setLastName("Kumar");
-		emp1.setIncome(100.0);
+		emp1.setIncome(1003444.0);
 
 		Employee emp2 = new Employee();
 		emp2.setId(2);
-		emp2.setFirstName("John");
-		emp2.setLastName("Marshall");
-		emp2.setIncome(200.0);
+		emp2.setFirstName("Kiran");
+		emp2.setLastName("Patel");
+		emp2.setIncome(20088.0);
 
 		map.put(1, emp1);
 		map.put(2, emp2);
@@ -32,7 +32,7 @@ public class JaxbHashMapExample {
 		employeeMap.setEmployeeMap(map);
 
 		/******************** Marshalling example *****************************/
-
+/**
 		JAXBContext jaxbContext = JAXBContext.newInstance(EmployeeMap.class);
 		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
@@ -40,22 +40,24 @@ public class JaxbHashMapExample {
 
 		jaxbMarshaller.marshal(employeeMap, System.out);
 		jaxbMarshaller.marshal(employeeMap,
-				new File("C://Users//Prashdeep//my_projects//my-first-app//src//employees.xml"));
+				new File("C://data_files//employees_useg_jaxb.xml"));
 
 		System.out.println("############################################################################");
+		*/
 
 		/********************
 		 * Unmarshalling example
 		 *****************************/
 
-		jaxbContext = JAXBContext.newInstance(EmployeeMap.class);
+		JAXBContext jaxbContext = JAXBContext.newInstance(EmployeeMap.class);
 		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 		EmployeeMap empMap = (EmployeeMap) jaxbUnmarshaller
-				.unmarshal(new File("C://Users//Prashdeep//my_projects//my-first-app//src//employees.xml"));
+				.unmarshal(new File("C://data_files//employees_useg_jaxb.xml"));
 
 		for (Integer empId : empMap.getEmployeeMap().keySet()) {
 			System.out.println(empMap.getEmployeeMap().get(empId).getFirstName());
 			System.out.println(empMap.getEmployeeMap().get(empId).getLastName());
 		}
+	
 	}
 }

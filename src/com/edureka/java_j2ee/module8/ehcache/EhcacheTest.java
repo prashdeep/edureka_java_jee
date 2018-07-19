@@ -32,12 +32,17 @@ public class EhcacheTest {
 		Session session1 = factory.openSession();
 		
 		Employee emp1 = (Employee) session1.load(Employee.class, 1);
+		System.out.println("fetched from the cache >>>>");
 		System.out.println(emp1.getId() + " " + emp1.getName() + " " + emp1.getSalary());
+		System.out.println("fetched from the cache >>>>");
+		
 		session1.close();
 
 		Session session2 = factory.openSession();
 		Employee emp2 = (Employee) session2.load(Employee.class, 1);
+		System.out.println("fetched from the cache <<<<");
 		System.out.println(emp2.getId() + " " + emp2.getName() + " " + emp2.getSalary());
+		System.out.println("fetched from the cache <<<<");
 		session2.close();
 		
 		Session session5 = factory.openSession();
@@ -45,6 +50,7 @@ public class EhcacheTest {
 		Employee oldEmployee = (Employee) session5.load(Employee.class, 1);
 		oldEmployee.setName("Pradeep Kumar");
 		oldEmployee.setSalary(44444.40f);
+		System.out.println("update  the table <<<<");
 		session5.update(oldEmployee);
 		
 		t2.commit();
@@ -52,14 +58,18 @@ public class EhcacheTest {
 		
 		Session session3 = factory.openSession();
 		Employee emp3 = (Employee) session3.load(Employee.class, 1);
+		System.out.println("fetched from the cache <<<<");
 		System.out.println(emp3.getId() + " " + emp3.getName() + " " + emp3.getSalary());
+		System.out.println("fetched from the cache <<<<");
 		session3.close();
 		
 		
 		
 		Session session4 = factory.openSession();
 		Employee emp4 = (Employee) session4.load(Employee.class, 1);
+		System.out.println("fetched from the cache <<<< >>>>>>");
 		System.out.println(emp4.getId() + " " + emp4.getName() + " " + emp3.getSalary());
+		System.out.println("fetched from the cache <<<< >>>>>>");
 		session4.close();
 
 

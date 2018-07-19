@@ -57,7 +57,7 @@ public class Client {
 	public Integer InsertRecordInDatabase(int id, String fname, String lname, int salary) throws HibernateException {
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
-		;
+
 
 		Employee e1 = new Employee(id, fname, lname, salary);
 		Integer empId = (Integer) session.save(e1);
@@ -71,10 +71,10 @@ public class Client {
 	public void DisplayRecords() throws HibernateException {
 		Session session = factory.openSession();
 		Criteria cr = session.createCriteria(Employee.class);
-		cr.add(Restrictions.ge("salary", 5000));
+		cr.add(Restrictions.le("salary", 5000));
 		List<Employee> employees = cr.list();
 		
-		//List<Employee> empList = createQuery("FROM EMPLOYEE where salaray >= 2000").list()
+		//List<Employee> empList = createQuery("FROM EMPLOYEE where salary >= 5000").list()
 
 		for (Iterator<Employee> iterator = employees.iterator(); iterator.hasNext();) {
 			Employee employee = iterator.next();

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE company SYSTEM "company.dtd" >
+<company>
+  <name>name</name>
+  <address>
+    <city>city</city>
+    <state>state</state>
+    <zip>zip</zip>
+  </address>
+  <employees>
+    <employee>
+      <id>id</id>
+      <name>name</name>
+      <age>age</age>
+    </employee>
+  </employees>
+</company>

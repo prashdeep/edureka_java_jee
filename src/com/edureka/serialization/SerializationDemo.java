@@ -14,10 +14,10 @@ public class SerializationDemo {
 		employee.setSSN(33444444);
 
 		try {
-			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("c:\\data_files\\employee.ser"));
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("C:\\java_projects\\src\\com\\edureka\\employee.ser"));
 			out.writeObject(employee);
 			out.close();
-			System.out.printf("Serialized data is saved in c:\\data_files\\employee.ser");
+			System.out.printf("Serialized data is saved in C:\\java_projects\\src\\com\\edureka\\employee.ser");
 		} catch (IOException i) {
 			i.printStackTrace();
 		}

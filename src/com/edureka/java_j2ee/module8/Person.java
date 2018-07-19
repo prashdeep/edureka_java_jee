@@ -11,53 +11,55 @@ import javax.persistence.Table;
 @Table(name = "PERSON_TABLE") // can be omitted if table name is exactly same as
 								// Class
 // name
+// Entity, Domain Transfer Object, DTO, Model
 public class Person {
-	
 
 	@Id // Required annotation
 	@Column(name = "PERSON_ID") // can be omitted if column name is same as field-name
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	
+
 	@Column(name = "FIRST_NAME")
 	private String firstName;
-	
+
 	@Column(name = "LAST_NAME")
 	private String lastName;
-	
+
 	@Column(name = "SALARY")
 	private int salary;
-	
-	
 
 	public Person() {
 	}
 
-	public Person(String fname, String lname, int salary) {
-		this.firstName = fname;
-		this.lastName = lname;
+	public Person(String firstName, String lastName, int salary) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.salary = salary;
 	}
 
-	// Getter - Setters
 	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {
 		return firstName;
 	}
 
-	public void setFirstName(String first_name) {
-		this.firstName = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
 		return lastName;
 	}
 
-	public void setLastName(String last_name) {
-		this.lastName = last_name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public int getSalary() {
@@ -67,9 +69,10 @@ public class Person {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", salary=" + salary + "]";
 	}
+
 }

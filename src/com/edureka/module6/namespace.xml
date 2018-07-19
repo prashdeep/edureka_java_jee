@@ -1,4 +1,5 @@
-<root xmlns:html="www.myspec.com/html" xmlns:f="www.myfurniture.com/furniture">
+<root xmlns:html="www.myspec.com/html" 
+	  xmlns:f="www.myfurniture.com/furniture">
 	<html:table>
 		<html:tr>Name</html:tr>
 		<html:td>Pradeep</html:td>

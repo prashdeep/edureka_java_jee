@@ -1,0 +1,41 @@
+ <?xml-stylesheet type="text/xsl" href="company.xsl"?>
+<company>
+	<name>Edureka</name>
+	<address>
+		<state>Karnataka</state>
+		<city>Bangalore</city>
+		<zip>577142</zip>
+	</address>
+	<employees>
+		<employee>
+			<id>12</id>
+			<name>Pradeep</name>
+			<age>32</age>
+			<dob>
+				<date>11</date>
+				<month>12</month>
+				<year>2018</year>
+			</dob>
+		</employee>
+		<employee>
+			<id>12</id>
+			<name>Pradeep</name>
+			<age>32</age>
+			<dob>
+				<date>11</date>
+				<month>12</month>
+				<year>2018</year>
+			</dob>
+		</employee>
+		<employee>
+			<id>12</id>
+			<name>Pradeep</name>
+			<age>32</age>
+			<dob>
+				<date>21</date>
+				<month>12</month>
+				<year>2018</year>
+			</dob>
+		</employee>
+	</employees>
+</company>    

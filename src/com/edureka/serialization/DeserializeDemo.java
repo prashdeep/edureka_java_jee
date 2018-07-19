@@ -9,7 +9,7 @@ public class DeserializeDemo {
 	public static void main(String[] args) {
 		Employee employee = null;
 		try {
-			ObjectInputStream in = new ObjectInputStream(new FileInputStream("c:\\data_files\\employee.ser"));
+			ObjectInputStream in = new ObjectInputStream(new FileInputStream("C:\\java_projects\\src\\com\\edureka\\employee.ser"));
 			employee = (Employee) in.readObject();
 			in.close();
 		} catch (IOException i) {

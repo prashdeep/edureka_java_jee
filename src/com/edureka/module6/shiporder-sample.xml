@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shiporder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shiporder.xsd">
+  <orderperson>orderperson</orderperson>
+  <shipto>
+    <name>fsdfsdf</name>
+    <address>1st E Main</address>
+    <city>Bangalore</city>
+    <country>India</country>
+  </shipto>
+  <item>
+    <title>Laptop</title>
+    <quantity>1</quantity>
+    <price>2900000.00</price>
+  </item>
+</shiporder>

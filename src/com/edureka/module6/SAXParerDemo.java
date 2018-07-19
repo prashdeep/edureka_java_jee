@@ -60,7 +60,7 @@ class SAXParerDemo extends DefaultHandler {
 
 		try {
 			SAXParerDemo userhandler = new SAXParerDemo();
-			File inputFile = new File("C://Users//Prashdeep//my_projects//my-first-app//src//input.xml");
+			File inputFile = new File("C:\\java_projects\\src\\input.xml");
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
 

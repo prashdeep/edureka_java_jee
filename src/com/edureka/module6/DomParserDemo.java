@@ -12,7 +12,7 @@ public class DomParserDemo {
 	public static void main(String[] args) {
 
 		try {
-			File inputFile = new File("C://Users//Prashdeep//my_projects//my-first-app//src//input.xml");
+			File inputFile = new File("C://java_projects//src//input.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(inputFile);

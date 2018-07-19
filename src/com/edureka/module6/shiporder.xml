@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shiporder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shiporder.xsd">
+<shiporder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="shiporder.xsd">
 	<orderperson>myOrder</orderperson>
 	<shipto>
 		<name>Pradeep</name>
-		<address>#111</address>
-		<address>2 nd Main</address>
-		<address>Girinagar</address>
-		<address>Banashankari</address>
-		<city>Bangalore</city>
-		<country>India</country>
+		<address>
+			<city>Bangalore</city>
+			<state>Karnataka</state>
+			<country>India</country>
+		</address>
+		<address>
+			<city>Bangalore</city>
+			<state>Karnataka</state>
+			<country>India</country>
+		</address>
+		<address>
+			<city>Bangalore</city>
+			<state>Karnataka</state>
+			<country>India</country>
+		</address>
 	</shipto>
 	<item>
 		<title>book</title>
@@ -24,7 +34,7 @@
 		<title>book</title>
 		<quantity>1</quantity>
 		<price>10.0</price>
-	
+
 	</item>
 	<item>
 		<title>book</title>

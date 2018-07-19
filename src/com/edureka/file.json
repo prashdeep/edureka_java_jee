@@ -1,0 +1,20 @@
+[
+  {
+    "id": 12,
+    "firstName": "Pradeep",
+    "lastName": "Kumar",
+    "income": 2000.0
+  },
+  {
+    "id": 15,
+    "firstName": "Hari",
+    "lastName": "Shaw",
+    "income": 9000.0
+  },
+  {
+    "id": 14,
+    "firstName": "Vinay",
+    "lastName": "Kumar",
+    "income": 5000.0
+  }
+]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="company.xsd">
+  <name>name</name>
+  <address>
+    <state>state</state>
+    <city>city</city>
+    <zip>1</zip>
+  </address>
+  <employees>
+    <emplyee>
+      <id>1</id>
+      <name>name</name>
+      <age>1</age>
+      <dob>
+        <date>1</date>
+        <month>1</month>
+        <year>1</year>
+      </dob>
+    </emplyee>
+  </employees>
+</company>

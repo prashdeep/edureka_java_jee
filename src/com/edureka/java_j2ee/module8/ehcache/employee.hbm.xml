@@ -7,7 +7,7 @@
 	<class name="com.edureka.java_j2ee.module8.ehcache.Employee"
 		table="EMPLOYEE_CACHE">
 		
-		<cache usage="read-write" />
+		<!--<cache usage="read-write" /> -->
 		
 		<!-- Property definitions  -->
 		<id name="id">

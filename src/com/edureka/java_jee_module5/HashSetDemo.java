@@ -5,17 +5,17 @@ import java.util.TreeSet;
 
 public class HashSetDemo {
 	public static void main(String[] args) {
-		HashSet<Student> studentSet = new HashSet<Student>();
-		studentSet.add(new Student("Prakash", 22, "A"));
-		studentSet.add(new Student("Prakash", 22, "A"));
-		studentSet.add(new Student("Praveen", 18, "B"));
-		studentSet.add(new Student("Vivek", 20, "C"));
-		studentSet.add(new Student("Dhanajay", 19, "A"));
-
-		System.out.println(studentSet);
-
-		System.out.println(studentSet.contains(new Student("Praveen", 18, "B")));
-
-		System.out.println(studentSet.contains(new Student("fdfdf", 19, "A")));
+		Student ram = new Student("Ram", 14, "A");
+		Student ram2 = new Student("Ram", 14, "A");
+		HashSet<Student> set = new HashSet<>();
+		set.add(ram);
+		set.add(ram2);
+		
+		System.out.println(set.contains(ram2));
+		System.out.println("HashCOde before update" +ram2.hashCode());
+		ram2.setAge(15);
+		System.out.println("HashCOde after update" +ram2.hashCode());
+		System.out.println(set.contains(ram2));
+		
 	}
 }

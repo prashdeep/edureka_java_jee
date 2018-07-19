@@ -2,19 +2,28 @@ package com.edureka.java_jee.module_4;
 
 public class AnonymounsInnerClass {
 
-	public static void main(String[] args) {
-		myInterface obj = new myInterface() {
-			
-			@Override
-			public void display() {
-				System.out.println("implemented by MyAwesomeDisplay class");
-				
-			}
-		};
+	MyInterface obj;
+	public AnonymounsInnerClass(MyInterface obj) {
+		// TODO Auto-generated constructor stub
+		this.obj = obj;
+	}
+	
+	public void print() {
 		obj.display();
 	}
+	
+	public static void main(String[] args) {
+	
+	
+	 }
+	
+	
 }
 
-interface myInterface {
+@FunctionalInterface
+interface MyInterface {
 	public void display();
+
 }
+
+

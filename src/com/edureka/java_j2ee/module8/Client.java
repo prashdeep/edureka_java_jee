@@ -32,17 +32,17 @@ public class Client {
 
 		// Add some records to the database */
 		Integer id1 = client.addRecord("Johny", "Travol", 10);
-		Integer id2 = client.addRecord("Kevin", "Becker", 20);
+        Integer id2 = client.addRecord("Kevin", "Becker", 20);
 		Integer id3 = client.addRecord("Bruce", "Almighty", 30);
 
 		/* Update a record */
-		//client.updateRecord(1, 5000);
+		client.updateRecord(1, 5000);
 
 		/* Delete */
-		//client.deleteRecord(3);
+		client.deleteRecord(3);
 
 		/* List the records */
-		// client.listRecords();
+		 //client.listRecords();
 	}
 
 	/* CREATE a record in the database */

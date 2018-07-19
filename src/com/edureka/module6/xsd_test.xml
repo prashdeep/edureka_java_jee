@@ -8,8 +8,7 @@ xsi:noNamespaceSchemaLocation="shiporder.xsd">
     <address>Langgt 23</address>
     <city>4000 Stavanger</city>
     <country>Norway</country>
-    <contry>Norway</contry>
-  </shipto>
+   </shipto>
   <item>
     <title>Empire Burlesque</title>
     <note>Special Edition</note>

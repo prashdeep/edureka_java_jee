@@ -7,9 +7,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "employee")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
+	
 	private Integer id;
 	private String firstName;
 	private String lastName;
+	private double income;
+
 
 	public Integer getId() {
 		return id;
@@ -43,6 +46,5 @@ public class Employee {
 		this.income = income;
 	}
 
-	private double income;
-
+	
 }

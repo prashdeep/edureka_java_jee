@@ -1,5 +1,6 @@
 package com.edureka.java_jee.module_4.threads;
 
+
 public class DeadLockSolution {
 	public static Object Lock1 = new Object();
 	public static Object Lock2 = new Object();

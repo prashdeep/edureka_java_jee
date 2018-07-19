@@ -15,27 +15,27 @@ public class PrepareStatementExample {
 		String sqlQuery = "insert into employee (id, first_name, last_name, salary, age) values(?,?,?,?,? )";
 		PreparedStatement preparedstatement = connection.prepareStatement(sqlQuery);
 	
-		preparedstatement.setInt(1, 22);
+		preparedstatement.setInt(1, 24);
 		preparedstatement.setString(2, "Naveen");
 		preparedstatement.setString(3, "Kumar");
-		preparedstatement.setInt(4, 30000);
+		preparedstatement.setInt(4, 300);
 		preparedstatement.setInt(5, 30);
+		preparedstatement.addBatch();
 		
 		
-		
-		preparedstatement.setInt(1,24);
+		preparedstatement.setInt(1,26);
 		preparedstatement.setString(2, "Kevin");
 		preparedstatement.setString(3, "Bolt");
-		preparedstatement.setInt(4, 40000);
+		preparedstatement.setInt(4, 4000);
 		preparedstatement.setInt(5, 28);
+		preparedstatement.addBatch();
 		
-		
-		preparedstatement.setInt(1,25);
+		preparedstatement.setInt(1,55);
 		preparedstatement.setString(2, "Kevin");
 		preparedstatement.setString(3, "Bolt");
-		preparedstatement.setInt(4, 40000);
+		preparedstatement.setInt(4, 4000);
 		preparedstatement.setInt(5, 28);
-		preparedstatement.addBatch(sqlQuery);
+		preparedstatement.addBatch();
 		
 	
 		

@@ -16,11 +16,11 @@
 		<property name="connection.password">welcome</property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		
-		<!-- Second level chache configuration using Ehcache -->
+		<!-- Second level chache configuration using Ehcache
 		<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
 		<property name="hibernate.cache.use_second_level_cache">true</property>
 		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
-		
+		-->
 		
 		<mapping resource="com/edureka/java_j2ee/module8/ehcache/employee.hbm.xml"/>
 	</session-factory>

@@ -3,6 +3,6 @@
 	<defaultCache maxElementsInMemory="100" eternal="false" timeToIdleSeconds="120" timeToLiveSeconds="200"
 		/>
 	
-	<cache name="com.edureka.java_j2ee.module8.ehcache.Employee" maxElementsInMemory="100"
-		eternal="false" timeToIdleSeconds="5" timeToLiveSeconds="200" />
+	<!-- <cache name="com.edureka.java_j2ee.module8.ehcache.Employee" maxElementsInMemory="100"
+		eternal="false" timeToIdleSeconds="5" timeToLiveSeconds="200" /> -->
 </ehcache> 

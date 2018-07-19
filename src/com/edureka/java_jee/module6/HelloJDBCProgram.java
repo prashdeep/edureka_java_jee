@@ -2,30 +2,32 @@ package com.edureka.java_jee.module6;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class HelloJDBCProgram {
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		Class.forName("com.mysql.jdbc.Driver");
-		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/students", "root", "welcome");
-		String insertQuery = "insert into student (id, name, age)  values (?, ?, ?)";
-		PreparedStatement statement = connection.prepareStatement(insertQuery);
-		statement.setInt(1, 5);
-		statement.setString(2, "Ganesh");
-		statement.setInt(3, 30);
+	public static void main(String[] args) {
 
-		statement.execute();
-		/*
-		 * ResultSet rs = statement.executeQuery("select * from student");
-		 * 
-		 * while(rs.next()){ System.out.println("Id is "+rs.getInt(1));
-		 * System.out.println("name is "+rs.getString(2)); System.out.println(
-		 * "age is "+rs.getInt(3)); }
-		 */
+		try (	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/students", "root", "welcome");
+				Statement statement = connection.createStatement()){
+			
+			
+			//statement.execute("insert into student(id, name,age ) values (3,'Kiran', 34)");
 
-		statement.close();
-		connection.close();
+			ResultSet rs = statement.executeQuery("select * from student left join address on student.id=address.student_id");
+
+			while (rs.next()) {
+				System.out.println("----------------------------");
+				System.out.println("Id is " + rs.getInt(1));
+				System.out.println("name is " + rs.getString(2));
+				System.out.println("age is " + rs.getInt(3));
+				System.out.println("----------------------------");
+				System.out.println();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

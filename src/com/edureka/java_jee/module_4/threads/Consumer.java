@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 class Consumer implements Runnable {
+	
 	private final List<Integer> taskQueue;
 
 	public Consumer(List<Integer> sharedQueue) {
@@ -12,8 +13,10 @@ class Consumer implements Runnable {
 
 	@Override
 	public void run() {
-		while (true) {
+		int counterVal = 10;
+		while (counterVal > 0) {
 			try {
+				counterVal--;
 				consume();
 			} catch (InterruptedException ex) {
 				ex.printStackTrace();

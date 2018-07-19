@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class StringTreeSetDemo {
 
 	public static void main(String[] args) {
-		TreeSet<Student> studentSet = new TreeSet();
+		TreeSet<Student> studentSet = new TreeSet<>();
 
 		studentSet.add(new Student("Prakash", 22, "A"));
 		studentSet.add(new Student("Praveen", 18, "B"));
@@ -21,7 +21,7 @@ public class StringTreeSetDemo {
 			}
 		}*/
 		
-		Iterator<Student> it = studentSet.iterator();
+		/*Iterator<Student> it = studentSet.iterator();
 		while(it.hasNext()){
 			Student student = it.next();
 			if (student.getName().equals("Prakash")) {
@@ -29,7 +29,9 @@ public class StringTreeSetDemo {
 			}
 		}
 		
-		System.out.println("Final list >> "+studentSet.size());
+		System.out.println("Final list >> "+studentSet.size());*/
+		
+		System.out.println(studentSet);
 		
 
 	}

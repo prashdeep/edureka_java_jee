@@ -35,13 +35,56 @@ public class ManageEmployee {
 		ManageEmployee ME = new ManageEmployee();
 
 		/* Add few employee records in database */
-		Integer empID1 = ME.addEmployee("Zara", "Ali", 1000);
-		
+		Integer empID1 = ME.addEmployee("Pradeep", "Ali", 1000);
+
 		Integer empID2 = ME.addEmployee("Daisy", "Das", 5000);
 		Integer empID3 = ME.addEmployee("John", "Paul", 10000);
 
+		System.out.println("Employee id " + empID1 + ", " + empID2 + ", " + empID3);
+
 		/* List down all the employees */
 		ME.listEmployees();
+
+		ME.updateEmployee(empID1);
+		
+		ME.deleteEmployee(empID1);
+
+	}
+
+	private void deleteEmployee(Integer empID1) {
+		Session session = factory.openSession();
+		Transaction tx = session.beginTransaction();
+		try {
+			Employee employee = (Employee) session.get(Employee.class, empID1);
+			if (employee != null) {
+				employee.setFirstName("UpdatedName");
+				session.delete(employee);
+				tx.commit();
+			}
+		} catch (Exception e) {
+			tx.rollback();
+		} finally {
+			session.close();
+		}
+
+		
+	}
+
+	private void updateEmployee(Integer empID1) {
+		Session session = factory.openSession();
+		Transaction tx = session.beginTransaction();
+		try {
+			Employee employee = (Employee) session.get(Employee.class, empID1);
+			if (employee != null) {
+				employee.setFirstName("UpdatedName");
+				session.save(employee);
+				tx.commit();
+			}
+		} catch (Exception e) {
+			tx.rollback();
+		} finally {
+			session.close();
+		}
 
 	}
 
@@ -78,7 +121,7 @@ public class ManageEmployee {
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
-			List employees = session.createQuery("FROM Employee where salary > 1000 order by salary").list();
+			List employees = session.createQuery("FROM Employee").list();
 			for (Iterator iterator = employees.iterator(); iterator.hasNext();) {
 				Employee employee = (Employee) iterator.next();
 				System.out.print("First Name: " + employee.getFirstName());
@@ -86,11 +129,16 @@ public class ManageEmployee {
 				System.out.println("  Salary: " + employee.getSalary());
 			}
 			tx.commit();
-		} catch (HibernateException e) {
-			if (tx != null)
-				tx.rollback();
-			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("Came inside the excception catch block");
+			if (e != null)
+				throw new NullPointerException("throwing exception intentialnnay");
+			System.out.println("Should not get printed");
+			/*
+			 * if (tx != null) tx.rollback(); e.printStackTrace();
+			 */
 		} finally {
+			System.out.println("Printing this statement from the finally block");
 			session.close();
 		}
 	}

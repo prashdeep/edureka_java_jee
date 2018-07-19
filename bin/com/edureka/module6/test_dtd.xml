@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Test PUBLIC "test" "Test.dtd" >
-<Test>
-	<Name>Vivek</Name>
+<!DOCTYPE employee PUBLIC "employee" "Test.dtd" >
+<employee>
+	<name>Pradeep</name>
 	<age>21</age>
+	<address>
+		<house-no>22</house-no>
+		<lane>8</lane>
+		<city>Bangalore</city>
+		<state>Karnataka</state>
+		<zip>544554</zip>
+	</address>
+	<address>
+		<house-no>22</house-no>
+		<street>7th Main</street>
+		<lane>8</lane>
+		<city>Bangalore</city>
+		<state>Karnataka</state>
+		<zip>544554</zip>
+	</address>
 	<from>Hydrabad</from>
 	<dob>
-		<date>dfdf</date>
 		<month>05</month>
+		<date>21</date>
 		<year>1983</year>
 	</dob>
-	<Profession>Developer</Profession>
-</Test>
+	<profession>Developer</profession>
+</employee>
 

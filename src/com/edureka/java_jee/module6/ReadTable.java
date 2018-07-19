@@ -23,5 +23,7 @@ public class ReadTable {
 			}
 			System.out.println(" ");
 		}
+		
+
 	}
 }

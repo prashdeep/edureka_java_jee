@@ -9,10 +9,10 @@ public class MyFirstJDBCProgram {
 		java.sql.PreparedStatement ps = null;
 		Connection conn = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			//Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/NEWSTUDENTS", "root", "welcome");
 			ps = conn.prepareStatement("insert into Student values(?,?,?,?)");
-			// stmt.execute("create table Student ( ID INT, NAME VARCHAR (20),
+			 //stmt.execute("create table Student ( ID INT, NAME VARCHAR (20),
 			// CITY VARCHAR (20), STATE VARCHAR(20))");
 			ps.setInt(1, 3);
 			ps.setString(2, "Naveen");
