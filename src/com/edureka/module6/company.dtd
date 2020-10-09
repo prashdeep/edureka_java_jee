@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT company (name, address, employees) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT address (city,state,zip) | (state, city,zip) >
+<!ELEMENT city (#PCDATA) >
+<!ELEMENT state (#PCDATA) >
+<!ELEMENT zip (#PCDATA) >
+<!ELEMENT employees (employee+) >
+<!ELEMENT employee (id, name, age, dob, projects*) >
+<!ELEMENT dob (date, month,year) | (month,date,year
+<!ELEMENT id (#PCDATA) >
+<!ELEMENT age (#PCDATA) >
+<!ELEMENT projects (project+) >
+<!ELEMENT project (id,client) >
+<!ELEMENT client (name,location) >
+

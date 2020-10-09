@@ -1,0 +1,27 @@
+1. loading the class using Class.forName
+2. DriverManager.getConnection()
+3. Create Statement/PreparedStatement/CallableStatement.
+4. Create the sql query and execute the sql statement.
+5. Closing the statement.
+6. Closing the connection
+
+1. There might be variation in the sql syntax
+2. Migrating from one database vendor to another will require code change
+3. Developers written qurries will not be optimized.
+4. Creating and closing database connection should be taken care in coding 
+
+Hibernate is a Object relational Mapper 
+
+Gaps between Object world and relational world
+
+1. int, char, String, double, float, boolean, Person, Student, Account, Address
+   VARCHAR, INTEGER, BLOB, CLOB, DATE, BOOLEAN
+
+2. Unique ID
+   overriding equals and hashcode method
+   primary key
+
+3. Relationships
+   
+  Composition - HAS a Relationship, Inheritance - IS A
+  primarykey, foreign key

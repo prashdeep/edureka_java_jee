@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hsqldb-2.4.0/hsqldb-2.4.0/hsqldb/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/apache-tomcat-8.5.24-windows-x64/apache-tomcat-8.5.24/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/required/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/required/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/required/hibernate-core-4.1.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/required/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/required/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/required/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/required/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/jar-files/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/optional/ehcache/ehcache-core-2.4.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/optional/ehcache/hibernate-ehcache-4.1.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prade/OneDrive - Classpath/hibernate-release-4.1.2.Final/hibernate-release-4.1.2.Final/lib/optional/ehcache/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

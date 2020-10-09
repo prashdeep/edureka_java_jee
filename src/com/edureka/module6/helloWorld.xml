@@ -1,0 +1,12 @@
+<courses>
+	<course name="Java JEE and SOA">
+		<no-of-participants>20</no-of-participants>
+		<sessions>14</sessions>
+	</course>
+	<course>
+		<name>Ruby on Rails</name>
+		<no-of-participants>20</no-of-participants>
+		<sessions>14</sessions>
+		<name-of-instructor>Pradeep</name-of-instructor>
+	</course>
+</courses>

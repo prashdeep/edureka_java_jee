@@ -1,0 +1,14 @@
+   <students>
+     <student>
+        <name> Rakesh </name>
+        <subject> Java </subject>
+     </student>
+     <student>
+        <name> Vishnu </name>
+        <subject> .NET </subject>
+     </student>         
+     <student>
+        <name> Ramu </name>
+        <subject> PHP </subject>
+     </student>
+   </students>

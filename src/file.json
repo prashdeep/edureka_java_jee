@@ -1,0 +1,15 @@
+{
+  "name": "Pradeep",
+  "address":"Bangalore",
+     
+  "list": [
+    "Pradeep",
+    "Praveen",
+    "Naveen",
+    "Ramesh"
+  ],
+  "empMap": {
+    "1": "Keshav",
+    "2": "Kumar"
+  }
+}

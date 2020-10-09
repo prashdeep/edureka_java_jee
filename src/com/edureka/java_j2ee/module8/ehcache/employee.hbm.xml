@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.edureka.java_j2ee.module8.ehcache.Employee"
+		table="EMPLOYEE_CACHE">
+		
+		<!--<cache usage="read-write" /> -->
+		
+		<!-- Property definitions  -->
+		<id name="id">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="name" />
+
+		<property name="salary" />
+
+	</class>
+
+</hibernate-mapping> 

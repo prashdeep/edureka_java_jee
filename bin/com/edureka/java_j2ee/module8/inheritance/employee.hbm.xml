@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.edureka.java_j2ee.module8.inheritance.Employee" table="EMPLOYEE_TABLE_PER_HEIRARCHY"
+		discriminator-value="emp">
+		<id name="id">
+			<generator class="increment">
+			</generator>
+		</id>
+		<discriminator column="type" type="string">
+		</discriminator>
+		<property name="name">
+		</property>
+		
+		<subclass name="com.edureka.java_j2ee.module8.inheritance.Regular_Employee" discriminator-value="regular_emp">
+			<property name="salary"/>
+			<property name="bonus"/>
+		</subclass>
+		
+		<subclass name="com.edureka.java_j2ee.module8.inheritance.Contract_Employee" discriminator-value="contract_emp">
+			<property name="pay_per_hour"/>
+			<property name="contract_duration"/>
+		</subclass>
+	</class>
+</hibernate-mapping> 

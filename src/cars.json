@@ -1,0 +1,13 @@
+{
+  name:car
+  supercars:[
+    {
+      name: "Ferrari",
+      type: "formula one"
+    },
+     {
+      name: "Ferrari 202",
+      type: "sports"
+    }
+  ]
+}

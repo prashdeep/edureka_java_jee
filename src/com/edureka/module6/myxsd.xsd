@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<xs:import namespace="http://www.w3.org/2001/XMLSchema-instance"
+		schemaLocation="xsixml" />
+	<xs:element name="shiporder">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="orderperson" />
+				<xs:element ref="shipto" />
+				<xs:element maxOccurs="unbounded" ref="item" />
+			</xs:sequence>
+			<xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="orderperson" type="xs:NCName" />
+	<xs:element name="shipto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="address" />
+				<xs:element ref="city" />
+				<xs:element ref="country" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="name" type="xs:NCName" />
+	<xs:element name="address" type="xs:NCName" />
+	<xs:element name="city" type="xs:NCName" />
+	<xs:element name="country" type="xs:NCName" />
+	<xs:element name="item">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="title" />
+				<xs:element ref="quantity" />
+				<xs:element ref="price" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="title" type="xs:NCName" />
+	<xs:element name="quantity" type="xs:integer" />
+	<xs:element name="price" type="xs:decimal" />
+</xs:schema>
